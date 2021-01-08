@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.outer-box {
+    background-color: darkgray;
+    padding: 20px;
+    width: 270px;
+    /*height: 250px;*/
+}
+
+.inner-box {
+    width: 250px;
+    height: 250px;
+}
+
+#red-inner-box {
+    background-color: red;
+    margin-bottom: 20px;
+}
+
+#yellow-inner-box {
+    background-color: yellow;
+    margin-bottom: 20px;
+}
+
+#green-inner-box {
+    background-color: green;
+}
