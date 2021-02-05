@@ -74,3 +74,6 @@ Kopiera koden nedan och lägg i index.html filen
 - live-server kommer nu ladda om index.html i webbläsaren
 
 ![omladdad live-server](img/reloaded-live-server.png)
+
+## Mappstruktur
+![Mappstruktur](img/mapp-structure.png)
