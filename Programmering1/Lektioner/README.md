@@ -2,4 +2,4 @@
 
 Lektioner kommer ligga i separata mappar
 
-[Lektion 1](1/README.md)
+[Lektion 1](1)
