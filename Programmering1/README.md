@@ -54,11 +54,11 @@ Kopiera koden nedan och lägg i index.html filen
       alert ("Welcome to this JavaScript tutorial")
       ```
 - Lägg till följande i header-taggen i index.html:
-    - ``` html
+    - ```html
       <script src="./index.js"/>
       ```
 - Index.html ska nu se ut enligt följande:
-    - ``` html
+    - ```html
       <html>
       <header>
       <script src="./index.js"/>
