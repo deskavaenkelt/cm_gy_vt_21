@@ -77,3 +77,6 @@ Kopiera koden nedan och lägg i index.html filen
 
 ## Mappstruktur
 ![Mappstruktur](img/mapp-structure.png)
+
+## Video resurs
+[Genomgång kom igång](https://www.youtube.com/watch?v=xMMMQVBto-w&list=PLo-BJUIALMg_Pv3r_zXgEO9zOLVK6XxQd)
