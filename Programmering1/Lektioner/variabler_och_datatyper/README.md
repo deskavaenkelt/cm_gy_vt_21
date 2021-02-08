@@ -457,5 +457,4 @@ typeof function myFunc() {
     - nummer
     - decimaltal
     - boolean
-
-[Variabler](https://github.com/ArastoSahbaei/practices/blob/master/Foundation/01-Variables.js)
+5. [Variabler](https://github.com/ArastoSahbaei/practices/blob/master/Foundation/01-Variables.js)
