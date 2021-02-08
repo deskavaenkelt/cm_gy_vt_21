@@ -17,9 +17,9 @@ Några exempel på vad man kan göra med JavaScript
 
 ## Kapitel
 
-- [Script-taggen](script_tag/README.md)
-- [Variabler och primitiva datatyper](variabler_och_datatyper/README.md)
-- [Concatenating Strings](concatenating_strings/README.md)
-
+- [Script-taggen](script_tag)
+- [Variabler och primitiva datatyper](variabler_och_datatyper)
+- [Concatenating Strings](concatenating_strings)
+- [Statement, Syntax och Kommentarer](statement_syntax_comments)
 
 
