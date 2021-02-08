@@ -1,5 +1,27 @@
 # \<script> - taggen
 
+## Innehåll
+
+- [Intern/Inline JavaScript](#interninline-javascript)
+- [JavaScript-funktioner och händelser](#javascript-funktioner-och-hndelser)
+- [JavaScript i `<head>` eller `<body>`](#javascript-i-head-eller-body)
+- [JavaScript i `<head>`](#javascript-i-head)
+- [JavaScript i `<body>`](#javascript-i-body)
+    - [Viktigt!](#viktigt)
+- [Extern JavaScript](#extern-javascript)
+    - [Fördelar med externa JavaScript](#frdelar-med-externa-javascript)
+- [Externa referenser](#externa-referenser)
+- [Separat JavaScript fil (enligt kom igång dokumentet)](#separat-javascript-fil-enligt-kom-igng-dokumentet)
+- [JavaScript Output](#javascript-output)
+- [JavaScript visningsmöjligheter](#javascript-visningsmjligheter)
+- [Använda innerHTML](#anvnda-innerhtml)
+- [Använda `document.write()`](#anvnda-documentwrite)
+    - [Varning 1](#varning-1)
+    - [Varning 2](#varning-2)
+- [Använda `window.alert()`](#anvnda-windowalert)
+- [Använda `console.log()`](#anvnda-consolelog)
+- [JavaScript Print](#javascript-print)
+
 I HTML infogas JavaScript-kod mellan `<script>` och `</script>` taggar.
 
 ## Intern/Inline JavaScript
@@ -245,7 +267,7 @@ För teständamål är det bekvämt att använda `document.write()`:
 
 [Exempel 9](exempel/exempel9.html)
 
-### Varning
+### Varning 1
 
 Med hjälp av `document.write()` efter att ett HTML-dokument har laddats raderas all befintlig HTML:
 
@@ -265,7 +287,7 @@ Med hjälp av `document.write()` efter att ett HTML-dokument har laddats raderas
 
 [Exempel 10](exempel/exempel10.html)
 
-### Varning
+### Varning 2
 
 Metoden `document.write()` ska endast användas för testning.
 
