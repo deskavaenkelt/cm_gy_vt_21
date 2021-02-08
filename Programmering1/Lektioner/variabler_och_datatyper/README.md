@@ -442,4 +442,20 @@ typeof function myFunc() {
 ````
 
 # Övningar
+
+1. Skapa en variabel för varje datatyp och lagra något i den.
+    - sträng
+    - nummer
+    - decimaltal
+    - boolean
+    - undefined
+    - null
+2. Skapa en Array med värden
+3. Skapa ett object som innehåller alla datatyper
+4. Skapa 2 variabler och lägg ihop
+    - sträng
+    - nummer
+    - decimaltal
+    - boolean
+
 [Variabler](https://github.com/ArastoSahbaei/practices/blob/master/Foundation/01-Variables.js)
