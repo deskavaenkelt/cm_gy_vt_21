@@ -1,6 +1,7 @@
 # Concatenating Strings - Sätta ihop strängar
 
-Det kommer in extra tecken framför dollartecken $, det är en begränsning i det format som används här. Källkoden finns i separata filer som löser det problemet.
+Det kommer in extra tecken framför dollartecken $, det är en begränsning i det format som används här. Källkoden finns i
+separata filer som löser det problemet.
 
 ## [Exempel 1](exempel/ex1.js)
 
@@ -73,6 +74,13 @@ alert(message2)
 
 Result: `Hey ! Welcome to my website Arasto, please enjoy your stay!`
 
+# Övningar
 
+Skapa 5-10 egna varianter på koden ovan från exempel 5 och 6, samt experimentera även med andra datatyper.
 
-please enjoy your stay!
+- sträng
+- nummer
+- decimaltal
+- boolean
+- undefined
+- null
