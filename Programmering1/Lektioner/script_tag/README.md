@@ -21,6 +21,7 @@
 - [Använda `window.alert()`](#anvnda-windowalert)
 - [Använda `console.log()`](#anvnda-consolelog)
 - [JavaScript Print](#javascript-print)
+- [Övningar](#vningar)
 
 I HTML infogas JavaScript-kod mellan `<script>` och `</script>` taggar.
 
@@ -377,3 +378,7 @@ aktuella fönstret.
 ```
 
 [Exempel 14](exempel/exempel14.html)
+
+# Övningar
+
+Skriv av alla exempel och se så att de fungerar på din egna dator

@@ -15,6 +15,7 @@
     - [Exponentiation](#exponentiation)
 - [Operatörens företräde (Operator Precedence)](#operatrens-fretrde-operator-precedence)
 - [JavaScript Operator Precedence Values](#javascript-operator-precedence-values)
+- [Övningar](#vningar)
 
 # JavaScript Aritmetiska operatorer
 
@@ -229,3 +230,7 @@ Value | Operator  | Description         | Example
 1     | ,         | Comma         | 5 , 6
 
 _Uttryck inom parentes beräknas helt innan värdet används i resten av uttrycket._
+
+# Övningar
+
+Skriv av alla exempel och se så att de fungerar på din egna dator

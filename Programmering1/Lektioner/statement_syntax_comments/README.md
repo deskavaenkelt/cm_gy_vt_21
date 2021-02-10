@@ -27,6 +27,7 @@
     - [Kommentarer från en rad](#kommentarer-p-en-rad)
     - [Flerlinjekommentarer](#flerlinjekommentarer)
     - [Använda kommentarer för att förhindra utförande](#anvnda-kommentarer-fr-att-frhindra-utfrande)
+- [Övningar](#vningar)
 
 # Statement
 
@@ -426,3 +427,7 @@ document.getElementById("myP").innerHTML = "My first paragraph.";
 */
 
 ```
+
+# Övningar
+
+Skriv av alla exempel och se så att de fungerar på din egna dator
