@@ -233,4 +233,274 @@ _Uttryck inom parentes beräknas helt innan värdet används i resten av uttryck
 
 # Övningar
 
-Skriv av alla exempel och se så att de fungerar på din egna dator
+Skriv av alla exempel och se så att de fungerar på din egna dator samt exempel nedan.
+
+## Övning 1
+```javascript
+const x = 10;
+const y = 20;
+const addition = x + y;
+
+alert (addition)
+```
+
+## Övning 2
+```javascript
+const x = 10;
+const y = 20;
+const substraction = x - y;
+
+alert (substraction)
+```
+
+## Övning 3
+```javascript
+const x = 10;
+const y = 20;
+const multiplication = x * y;
+
+alert (multiplication)
+```
+
+## Övning 4
+```javascript
+const x = 10;
+const y = 20;
+const division = x / y;
+
+alert (division)
+```
+
+## Övning 5
+```javascript
+const x = 10;
+const y = 5;
+const modulus = x % y;
+
+alert (modulus)
+```
+
+## Övning 6
+```javascript
+const x = 10;
+const y = 3;
+const modulus = x % y;
+
+alert (modulus)
+```
+
+## Övning 7
+```javascript
+const x = 10;
+const y = 6;
+const modulus = x % y;
+
+alert (modulus)
+```
+
+## Övning 8
+```javascript
+const x = 2;
+const y = 2;
+const exponentiation = x ** y;
+
+alert (exponentiation)
+```
+
+## Övning 9
+```javascript
+const x = 2;
+const y = 3;
+const exponentiation = x ** y;
+
+alert (exponentiation)
+```
+
+## Övning 10
+```javascript
+const x = 2;
+const y = 4;
+const exponentiation = x ** y;
+
+alert (exponentiation)
+```
+
+## Övning 11
+```javascript
+const x = 5;
+const newValue = x++;
+
+alert (newValue)
+```
+
+## Övning 12
+```javascript
+const x = 5;
+const newValue = x++;
+const newValue = x++;
+
+alert (newValue)
+```
+
+## Övning 13
+```javascript
+const x = 5;
+const newValue = x++;
+const newValue = x++;
+const newValue = x++;
+
+alert (newValue)
+```
+
+## Övning 14
+```javascript
+const x = 5;
+const y = 10;
+const isIdentical = x == y;
+
+alert (isIdentical)
+```
+
+## Övning 15
+```javascript
+const x = 10;
+const y = 10;
+const isIdentical = x == y;
+
+alert (isIdentical)
+```
+
+## Övning 16
+```javascript
+const x = '10';
+const y = 10;
+const isIdentical = x == y;
+
+alert (isIdentical)
+```
+
+## Övning 17
+```javascript
+const x = 10;
+const y = 10;
+const isIdenticalValueAndType = x === y;
+
+alert (isIdenticalValueAndType)
+```
+
+## Övning 18
+```javascript
+const x = '10';
+const y = 10;
+const isIdenticalValueAndType = x === y;
+
+alert (isIdenticalValueAndType)
+```
+
+## Övning 19
+```javascript
+const x = '10';
+const y = 10;
+const isDifferent = x != y;
+
+alert (isDifferent)
+```
+
+## Övning 20
+```javascript
+const x = 10;
+const y = 10;
+const isDifferent = x != y;
+
+alert (isDifferent)
+```
+
+## Övning 21
+```javascript
+const x = 5;
+const y = 10;
+const isDifferent = x != y;
+
+alert (isDifferent)
+```
+
+## Övning 22
+```javascript
+const x = '10';
+const y = 10;
+const isDifferentValueAndType = x !== y;
+
+alert (isDifferentValueAndType)
+```
+
+## Övning 23
+```javascript
+const x = 10;
+const y = 10;
+const isDifferentValueAndType = x !== y;
+
+alert (isDifferentValueAndType)
+```
+
+## Övning 24
+```javascript
+const x = 5;
+const y = 10;
+const isDifferentValueAndType = x !== y;
+
+alert (isDifferentValueAndType)
+```
+
+## Övning 25
+```javascript
+const x = 5;
+const y = 10;
+const isGreater = x > y;
+
+alert (isGreater)
+```
+
+## Övning 26
+```javascript
+const x = 5;
+const y = 5;
+const isGreater = x > y;
+
+alert (isGreater)
+```
+
+## Övning 27
+```javascript
+const x = 5;
+const y = 5;
+const isGreaterOrEqual = x >= y;
+
+alert (isGreaterOrEqual)
+```
+
+## Övning 28
+```javascript
+const x = 5;
+const y = 10;
+const isLesser = x < y;
+
+alert (isLesser)
+```
+
+## Övning 29
+```javascript
+const x = 5;
+const y = 5;
+const isLesser = x < y;
+
+alert (isLesser)
+```
+
+## Övning 30
+```javascript
+const x = 5;
+const y = 5;
+const isLesserOrEqual = x <= y;
+
+alert (isLesserOrEqual)
+```
