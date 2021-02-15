@@ -22,4 +22,5 @@ Några exempel på vad man kan göra med JavaScript
 - [Concatenating Strings](concatenating_strings)
 - [Statement, Syntax och Kommentarer](statement_syntax_comments)
 - [Aritmetiska operatorer](aritmetiska_operatorer)
+- [Logiska operatorer](logical_operators)
 
