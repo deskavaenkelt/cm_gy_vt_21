@@ -17,10 +17,11 @@ Några exempel på vad man kan göra med JavaScript
 
 ## Kapitel
 
-- [Script-taggen](script_tag)
-- [Variabler och primitiva datatyper](variabler_och_datatyper)
-- [Concatenating Strings](concatenating_strings)
-- [Statement, Syntax och Kommentarer](statement_syntax_comments)
-- [Aritmetiska operatorer](aritmetiska_operatorer)
-- [Logiska operatorer](logical_operators)
-- [Villkorliga uttalanden (Conditional statements)](conditional_statements)
+1. [Script-taggen](script_tag)
+2. [Variabler och primitiva datatyper](variabler_och_datatyper)
+3. [Concatenating Strings](concatenating_strings)
+4. [Statement, Syntax och Kommentarer](statement_syntax_comments)
+5. [Aritmetiska operatorer](aritmetiska_operatorer)
+6. [Logiska operatorer](logical_operators)
+7. [Villkorliga uttalanden (Conditional statements)](conditional_statements)
+8. [Loopar](loops)
