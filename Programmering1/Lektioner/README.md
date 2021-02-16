@@ -23,4 +23,4 @@ Några exempel på vad man kan göra med JavaScript
 - [Statement, Syntax och Kommentarer](statement_syntax_comments)
 - [Aritmetiska operatorer](aritmetiska_operatorer)
 - [Logiska operatorer](logical_operators)
-
+- [Villkorliga uttalanden (Conditional statements)](conditional_statements)
