@@ -1,4 +1,4 @@
-# Lektion 1
+# Lektioner
 
 JavaScript är världens mest populära programmeringsspråk.  
 JavaScript är programmeringsspråket för webben.  
