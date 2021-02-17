@@ -730,3 +730,4 @@ Skriv ett JavaScript-program som:
 5. hittar det minsta talet av fem siffror. Visa med en resultatet med en `console.log()`.
     - Exempel nummer : -5, -2, -6, 0, -1
     - Resultat : -5
+6. [Conditionals](04-Conditionals.js)

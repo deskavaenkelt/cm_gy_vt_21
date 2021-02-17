@@ -458,4 +458,6 @@ typeof function myFunc() {
     - nummer
     - decimaltal
     - boolean
-6. [Variabler](https://github.com/ArastoSahbaei/practices/blob/master/Foundation/01-Variables.js)
+6. [Variabler](01-Variables.js)
+7. [Arrays](02-Arrays.js)
+8. [Objects](05-Objects.js)

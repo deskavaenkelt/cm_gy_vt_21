@@ -781,6 +781,12 @@ Skriv av alla exempel och experimentera med dem.
 
 9. Skriv ett JavaScript-program för att beräkna den största gemensamma nämnaren (SGN) av två positiva heltal.
 
+10. Skriv ett JavaScript-program för att summera alla multiplarna av 3 och 5 under 1000.
+    - Om talet är delbart med 3 addera det till summan
+    - Om talet är delbart med 5 addera det till summan
+    - Svar = 233168
+
+11. [Loops](03-Loops.js)
 
 # Svar
 
@@ -793,3 +799,4 @@ Skriv av alla exempel och experimentera med dem.
 - [Övning 7](ovning7.js)
 - [Övning 8](ovning8.js)
 - [Övning 9](ovning9.js)
+- [Övning 10](ovning10.js)
