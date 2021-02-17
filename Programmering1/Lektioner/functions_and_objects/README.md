@@ -605,14 +605,14 @@ I exemplet nedan när man kallar på person1.fullName med person2 som argument, 
 
 ```javascript
 let person1 = {
-  fullName: function () {
-    return this.firstName + " " + this.lastName;
-  }
+    fullName: function () {
+        return this.firstName + " " + this.lastName;
+    }
 }
 
 let person2 = {
-  firstName: "John",
-  lastName: "Doe",
+    firstName: "John",
+    lastName: "Doe",
 }
 
 text = person1.fullName.call(person2);
@@ -627,8 +627,42 @@ John Doe
 
 # Övningar
 
+1. Skriv av alla exempel och se så att de fungerar på din egna dator
 
+2. Experimentera med dem
 
+3. Gör 4 funktioner för de 4 räknesätten som returnerar sitt svar
+    - Addition
+    - Subtraktion
+    - Multiplikation
+    - Division
+        - Lägg till en kontroll som kontrollerar så man inte kan dividera med 0 (noll).
 
+4. Skapa ett objekt med en person som har egenskaper samt en funktion som skriver ut all data.
+    - Skriv ut all separat data från personen till konsolen samt använd den inbyggda funktionen för att skriva ut all
+      data.
 
+5. Skapa flera objekt med flera personer som har egenskaper samt skapa ett separat objekt som har en funktion som
+   skriver ut all data (explicit funktions bindning).
 
+6. Skapa ett hus som object med egenskaper samt inbyggda funktioner för att:
+    - Öppna/stänga dörrar
+    - Öppna/stänga fönster
+
+7. Skriv en hälsning till användaren:
+    - beroende på vilken tid det är på dygnet. T ex. ”God förmiddag”, ”God middag”.
+    - Skriv också en hälsning med vilken årstid det är.
+
+8. Konvertera Celsius till Fahrenheit.  
+    Man ska kunna konvertera Celsius till Fahrenheit.  
+    Extra: gör så att man kan välja om man ska konvertera Celsius till Fahrenheit eller omvänt.  
+   `fahrenheit = celsius * 9 / 5 + 32`  
+   `celsius = (fahrenheit - 32) * 5 / 9`
+
+9. Skapa ett objekt för en person med egenskaper för namn, adress, telefon, vilket år man är född. Objektet ska ha en funktion som räknar ut hur gammal man är.
+
+10. [Funktioner](06-Functions.js)
+
+11. [Funktioner ovh Returns](07-FunctionsReturn.js)
+
+12. [Objekt](05-Objects.js)
