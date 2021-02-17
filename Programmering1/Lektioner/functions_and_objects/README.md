@@ -25,7 +25,7 @@
     - [This för sig själv](#this-fr-sig-sjlv)
     - [This i en funktion (standard)](#this-i-en-funktion-standard)
     - [This i en funktion (strikt)](#this-i-en-funktion-strikt)
-    - [This i en "Event Handlers"](#this-i-en-event-handlers)
+    - [This i en "Event Handlers"](#this-i-event-handlers)
     - [Objekt metods bindning](#objekt-metods-bindning)
     - [Explicit funktions bindning](#explicit-funktions-bindning)
 - [Övningar](#vningar)
