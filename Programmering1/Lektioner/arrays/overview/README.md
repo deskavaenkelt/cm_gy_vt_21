@@ -29,6 +29,9 @@ JavaScript-arrays används för att lagra flera värden i en enda variabel.
     - [Lösning 1](#lsning-1)
     - [Lösning 2](#lsning-2)
     - [Lösning 3](#lsning-3)
+- [Övningar](#vningar)
+    - [Arrayer](#arrayer)
+    - [Metoder](#metoder)
 
 **Exempel**
 
@@ -596,5 +599,56 @@ console.log(fruits instanceof Array);
 true
 ```
 
+# Övningar
 
+## Arrayer
 
+1. Skriv av alla exempel och experimentera med dem.
+
+2. Skapa 4 olika arrayer met 3-5 attribut var för:
+    - en karaktär
+    - ett vapen
+    - en sköld
+    - skills
+
+3. Gör samma sak som i övning 2 men med nyckelordet `new`
+
+4. Skriv ut alla egenskaper från övning 2 till skärmen
+
+5. Ändra 2 värden i varje array från övning 2
+
+6. Skriv ut varje hel array från övning 2
+
+7. Gör om övning 2 med objekt istället
+    - en karaktär
+    - ett vapen
+    - en sköld
+    - skills
+
+8. Skriv ut alla egenskaper från övning 7 till skärmen
+
+9. Ändra 2 värden i varje array från övning 7
+
+10. Skriv ut varje hel array från övning 7
+
+## Metoder
+
+**Från övning 2 och 7 på alla arrayer och objekt**
+
+11. Använd längdmetoden och lagra dem i egna variabler. Skriv sedan ut dem.
+
+12. Plocka första elementet och lagra dem i egna variabler. Skriv sedan ut dem.
+
+13. Plocka ut sista elementet och lagra dem i egna variabler. Skriv sedan ut dem.
+
+14. Plocka ut resterande element och lagra dem i egna variabler. Skriv sedan ut dem.
+
+15. Loopa igenom alla dina listor och skriv ut vad de innehåller.
+
+16. Lägg till element i alla listor, skriv ut listan. Använd båda metoderna.
+
+17. Beskriv skillnaden mellan arrays och objekt.
+
+18. Vad ska du undvika med arrays?
+
+19. Skriv ut de olika funktionerna/testerna du kan göra för att testa om en variabel är en array.
