@@ -25,6 +25,5 @@ Några exempel på vad man kan göra med JavaScript
 6. [Logiska operatorer](logical_operators)
 7. [Villkorliga uttalanden (Conditional statements)](conditional_statements)
 8. [Arrays](arrays)
-9. [Objekt]()
-10. [Loopar](loops)
-11. [Funktioner och objekt](functions_and_objects)
+9. [Loopar](loops)
+10. [Funktioner och objekt](functions_and_objects)
