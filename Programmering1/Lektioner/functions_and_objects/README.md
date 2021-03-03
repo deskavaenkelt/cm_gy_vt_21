@@ -663,3 +663,4 @@ John Doe
 12. [Objekt](05-Objects.js)
 
 13. Gör alla övningar med ECMAScript 2015 - ES6
+    - dvs Arrow functions
