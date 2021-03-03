@@ -220,12 +220,6 @@ function myFunction() {
 // code here can NOT use carName
 ```
 
-Resultat:
-
-```
-Temperaturen är 25 Celsius
-```
-
 Eftersom lokala variabler bara känns igen i sina funktioner kan variabler med samma namn användas i olika funktioner.
 
 Lokala variabler skapas när en funktion startar och raderas när funktionen är klar.
@@ -654,15 +648,18 @@ John Doe
     - Skriv också en hälsning med vilken årstid det är.
 
 8. Konvertera Celsius till Fahrenheit.  
-    Man ska kunna konvertera Celsius till Fahrenheit.  
-    Extra: gör så att man kan välja om man ska konvertera Celsius till Fahrenheit eller omvänt.  
+   Man ska kunna konvertera Celsius till Fahrenheit.  
+   Extra: gör så att man kan välja om man ska konvertera Celsius till Fahrenheit eller omvänt.  
    `fahrenheit = celsius * 9 / 5 + 32`  
    `celsius = (fahrenheit - 32) * 5 / 9`
 
-9. Skapa ett objekt för en person med egenskaper för namn, adress, telefon, vilket år man är född. Objektet ska ha en funktion som räknar ut hur gammal man är.
+9. Skapa ett objekt för en person med egenskaper för namn, adress, telefon, vilket år man är född. Objektet ska ha en
+   funktion som räknar ut hur gammal man är.
 
 10. [Funktioner](06-Functions.js)
 
 11. [Funktioner ovh Returns](07-FunctionsReturn.js)
 
 12. [Objekt](05-Objects.js)
+
+13. Gör alla övningar med ECMAScript 2015 - ES6
