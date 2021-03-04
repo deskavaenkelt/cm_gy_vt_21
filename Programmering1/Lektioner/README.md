@@ -27,3 +27,4 @@ Några exempel på vad man kan göra med JavaScript
 8. [Arrays](arrays)
 9. [Loopar](loops)
 10. [Funktioner och objekt](functions_and_objects)
+11. [Övningar](exercises)
