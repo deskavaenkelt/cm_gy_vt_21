@@ -2,16 +2,59 @@
 
 ## Innehåll
 
-- [Uppgift](#uppgift)
+- [Inledning](#inledning)
+    - [Bakgrund](#bakgrund)
+    - [Frågeställningen](#frgestllningen)
+    - [Mål](#ml)
+    - [Avgränsning](#avgrnsning)
+    - [Syfte](#syfte)
+    - [Vad ska ni leverera?](#vad-ska-ni-leverera)
+- [Projekt Uppgift](#projekt-uppgift)
     - [Lägg till varor i kundkorgen](#lgg-till-varor-i-kundkorgen)
     - [Tips](#tips)
 - [Betygskrav](#betygskrav)
     - [Betyg E](#betyg-e)
     - [Betyg C](#betyg-c)
     - [Betyg A](#betyg-a)
-- [](#)
+- [Sista inlämningstid](#sista-inlmningstid)
 
-# Uppgift
+# Inledning
+
+## Bakgrund
+
+Ni är nu i slutet på kursen Programmering 1
+
+## Frågeställningen
+
+Hur kan vi göra en kundkorg som uppdateras.
+
+## Mål
+
+I detta projekt ska ni göra en enkel hemsida där man kan lägga böcker man vil köpa i en kundkorg. Man ska kunna
+uppdatera antalet böcker samt att när en viss summa nås får man fri frakt.
+
+## Avgränsning
+
+HTML och CSS för det grafiska gränssnittet och Vanilla JavaScript för funktionaliteten. Dvs ingen:
+
+- JQuery
+- Media Queries
+- JavaScript Frameworks
+
+## Syfte
+
+Att ni ska lära er vad JavaScript tillför för funktionalitet samt vilket möjligheter det ger för programutveckling.
+
+## Vad ska ni leverera?
+
+En applikation med en kundkorg, där man ska kunna
+
+- Visa vilka böcker som finns
+- Lägga till böcker i en kundkorg
+- Ta bort böcker i en kundkorg
+- Uppdatera antalet böcker i en kundkorg
+
+# Projekt Uppgift
 
 ## Lägg till varor i kundkorgen
 
@@ -19,20 +62,20 @@
 
 ### Funktioner som ska finnas
 
-När användaren ändrar antalet böcker så ska summan uppdateras med en gång.
+- När användaren ändrar antalet böcker så ska summan uppdateras med en gång.
 
-Det ska inte vara möjligt att skriva in felaktiga värden så som negativa värden i "antalet böcker boxarna".
+- Det ska inte vara möjligt att skriva in felaktiga värden så som negativa värden i "antalet böcker boxarna".
 
-Kundkorgen ska vara tillgänglig från bilden på en kundkorg samt knappen "Checkout".
+- Kundkorgen ska vara tillgänglig från bilden på en kundkorg samt knappen "Checkout".
 
-Om ordern är på mer än 159kr (eller lika med) så ska det vara fri frakt. Om summan för fri frakt inte uppnåtts så visa
-hur långt det är kvar till fri frakt:
+- Om ordern är på mer än 159kr (eller lika med) så ska det vara fri frakt. Om summan för fri frakt inte uppnåtts så visa
+  hur långt det är kvar till fri frakt:
 
 ![](img/2.png)
 
 ## Tips
 
-Använd `Map` istället för en lista för din kundkorg:
+Använd `Map` istället för en `array` för din kundkorg:
 
 ```javascript
 const cart = new Map()
@@ -41,7 +84,7 @@ const cart = new Map()
 # Betygskrav
 
 Det är funktionaliteten på ert arbete som betygssätts inte hur gränssnittet ser ut. Dock gör det inget om gränssnittet
-ser polerat ut då det ger erfarenhet och kunskaper till nästkommande kurser.
+ser polerat ut då det ger erfarenhet, repetition och kunskaper till nästkommande kurser.
 
 ## Betyg E
 
@@ -102,4 +145,6 @@ Din dokumentation ska utöver det i [Betyg C](#betyg-c) innehålla:
 - Lämna förslag på förbättringar av din kod.
 - Lämna exempel på lösningar du valde att **inte** implementera
 
+# Sista inlämningstid
 
+4 April kl 23:59
