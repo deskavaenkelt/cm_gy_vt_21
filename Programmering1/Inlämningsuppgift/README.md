@@ -81,6 +81,8 @@ Använd `Map` istället för en `array` för din kundkorg:
 const cart = new Map()
 ```
 
+Länk: [w3schools](https://www.w3schools.com/jsref/jsref_map.asp)
+
 # Betygskrav
 
 Det är funktionaliteten på ert arbete som betygssätts inte hur gränssnittet ser ut. Dock gör det inget om gränssnittet
