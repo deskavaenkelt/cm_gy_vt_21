@@ -1,0 +1,9 @@
+body {
+    background-color: beige;
+}
+
+.content {
+    max-width: 600px;
+    padding: 10px;
+    margin: auto;
+}

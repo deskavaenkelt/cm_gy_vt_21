@@ -112,7 +112,10 @@ Skriv i konsolen:
 
 Vi ska använda [create-react-app](https://www.npmjs.com/package/create-react-app)
 
+Gå till den mappen du vill skapa dina projekt i och skriv i terminalen:
+
 `npx create-react-app react-test`
+`cd react-test`
 
 Starta applikationen
 
@@ -121,3 +124,9 @@ Starta applikationen
 Genomgång
 
 Funktionella element, returnerar endast ett element, wrappern kan vara tom
+
+
+## React-Router-DOM
+
+`npm i react-router-dom`
+

@@ -1,14 +1,15 @@
-import './App.css';
+import MyFirstComponent from './MyFirstComponent';
+import Grid from "./components/Grid";
+import './shared/global/css/Global.css'
+import { WelcomeMessage } from "./components/WelcomeMessage";
 
 function App() {
     return (
-        <>
-            <h1>Hej</h1>
-            <p>brödtext</p>
-            <p>
-                någonting
-            </p>
-        </>
+        <div className="content">
+            <Grid/>
+            <MyFirstComponent/>
+            <WelcomeMessage name="Lars" age="32"/>
+        </div>
     );
 }
 
