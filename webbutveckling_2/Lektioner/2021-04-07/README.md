@@ -2,10 +2,22 @@
 
 ## Innehåll
 
+- [](#)
 - [Node & NPM](#node--npm)
 - [](#)
 - [](#)
-- [](#)
+
+# Frågor och svar
+
+Vad kan man göra för att bli bättre på det vi gör?
+- HTML
+- CSS
+- JavaScript
+
+
+# Punkter idag
+
+Gör en snabb hemsida
 
 # Node & NPM
 
@@ -31,6 +43,8 @@ Finns packet för frontend och backend
 2. Github Repo + Git
 3. Package.json fil (Manage files)
 
+## Uppgradera npm
+
 Vi har redan installerat node & npm men vi kan uppgradera vår version med kommandot.
 
 **Linux och Mac**
@@ -39,9 +53,38 @@ Vi har redan installerat node & npm men vi kan uppgradera vår version med komma
 
 **Windows**
 
-# `windows script`
+Öppna PowerShell som Administratör och klistra in:
+
+`Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force`
+
+Installera en uppgraderingshanterare:
+
+`npm install --global --production npm-windows-upgrade`
+
+Uppdatera till senaste versionen:
+
+`npm-windows-upgrade --npm-version latest`
+
+Uppdatera till och välj version manuellt:
+
+`npm-windows-upgrade`
+
+[Källa](https://github.com/felixrieseberg/npm-windows-upgrade)
+
+## För att starta ett npm projekt
+
+Skriv i konsolen:
+
+`npm init`
+
+
+# React
 
 [Reacts npm sida](https://www.npmjs.com/package/react)
+
+## Hämta och installera npm paketet
+
+`npm install <package-name>`
 
 **Linux och Mac**
 
@@ -57,15 +100,24 @@ Skriv i konsolen:
 
 **Windows**
 
-# `windows script`
+`npm install react`
 
-## För att starta ett npm projekt
+## Avinstallera npm paketet
 
-Skriv i konsolen:
+`npm uninstall <package-name>`
 
-`npm init`
+`npm uninstall react`
 
+## Installera React
 
+Vi ska använda [create-react-app](https://www.npmjs.com/package/create-react-app)
 
+`npx create-react-app react-test`
 
-[Reacts npm sida](https://www.npmjs.com/package/react)
+Starta applikationen
+
+`npm start`
+
+Genomgång
+
+Funktionella element, returnerar endast ett element, wrappern kan vara tom
