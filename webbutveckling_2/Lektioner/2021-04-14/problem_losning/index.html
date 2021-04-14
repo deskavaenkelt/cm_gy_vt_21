@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problemlösning</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropdown.css">
+</head>
+<body>
+
+<div id="navbar">
+    <header>
+        <img src="img/logo-ikea.png" alt="Ikeas logotype" id="ikea-logo">
+    </header>
+    <nav>
+        <ul class="navbar-buttons">
+            <li class="navbar-buttons-item">
+                <div class="dropdown">
+                    <button class="dropdown-button">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <li class="navbar-buttons-item">
+                <a class="active navbar-buttons-item-link" href="#">Home</a>
+            </li>
+            <li class="navbar-buttons-item">
+                <a href="#" class="navbar-buttons-item-link">News</a>
+            </li>
+            <li class="navbar-buttons-item">
+                <a href="#" class="navbar-buttons-item-link">Contact</a>
+            </li>
+            <li class="navbar-buttons-item">
+                <a href="#" class="navbar-buttons-item-link">About</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<main>
+    <section>
+        <article>
+            <h2>Titel</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab amet aspernatur cupiditate dignissimos
+                eaque error illo illum perspiciatis possimus quia temporibus, veniam voluptatum? Doloremque et natus non
+                porro quaerat.
+            </p>
+            <img src="img/img_0.png"
+                 alt="Random bild 0"
+                 class="main-images">
+        </article>
+        <article>
+            <h2>Titel</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab amet aspernatur cupiditate dignissimos
+                eaque error illo illum perspiciatis possimus quia temporibus, veniam voluptatum? Doloremque et natus non
+                porro quaerat.
+            </p>
+            <img src="img/img_1.png"
+                 alt="Random bild 1"
+                 class="main-images">
+        </article>
+        <article>
+            <h2>Titel</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ab amet aspernatur cupiditate dignissimos
+                eaque error illo illum perspiciatis possimus quia temporibus, veniam voluptatum? Doloremque et natus non
+                porro quaerat.
+            </p>
+            <img src="img/img_2.png"
+                 alt="Random bild 2"
+                 class="main-images">
+        </article>
+    </section>
+
+    <section>
+        <button onclick="getInfoFromJavaScript()">
+            Hämta information fån JavaScript objekt
+        </button>
+        <p id="new-text-from-javascript-solution-one"></p>
+        <p id="new-text-from-javascript-solution-two"></p>
+    </section>
+</main>
+
+<footer>
+    <a href="https://www.molndal.se/campus-molndal.html" target="_blank">Campus Mölndal &copy; 2021</a>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

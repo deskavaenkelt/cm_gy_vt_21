@@ -1,0 +1,112 @@
+/* For mobile phones: */
+body {
+    background-color: antiquewhite;
+}
+
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+}
+
+#ikea-logo {
+    height: 92px;
+}
+
+nav {
+    width: 100%;
+}
+
+.navbar-buttons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+}
+
+.navbar-buttons-item {
+    /*float: right;*/
+}
+
+.navbar-buttons-item-link {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar-buttons-item-link:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+main {
+    margin-top: 350px;
+    margin-bottom: 40px;
+}
+
+.main-images {
+    width: 100%;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: aquamarine;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    body {
+        background-color: green;
+    }
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    body {
+        background-color: blue;
+    }
+
+    header {
+        width: 15%;
+        float: left;
+        text-align: left;
+    }
+
+    #ikea-logo {
+        height: 46px;
+    }
+
+    nav {
+        width: 85%;
+        float: right;
+    }
+
+    .navbar-buttons-item {
+        float: right;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    .main-images {
+        width: auto;
+        height: 200px;
+    }
+}

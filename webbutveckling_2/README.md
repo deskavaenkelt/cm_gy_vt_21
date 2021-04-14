@@ -61,8 +61,8 @@
 | Lektion | Datum       | Nyckelord  | Vad vi ska gå igenom        |
 | ------- | ----------- | :--------: | --------------------------- |
 |  1 | 2021-04-07  | Repetition HTML, CSS, JS, Node + NPM, React | Bygga hemsidor med vanilla JavaScript, samt samma i React |
-|  2 | 2021-04-14  |  |  |
-|  3 | 2021-04-21  |  |  |
+|  2 | 2021-04-14  | Plagiat/Fusk, Problemlösning, Semantik, Repetition | Hur arbetar man med utveckling |
+|  3 | 2021-04-21  | React-Router-Dom | React forts.  |
 |  4 | 2021-04-28  |  |  |
 |  5 | 2021-05-05  |  | Gränssnittsdesign |
 |  6 | 2021-05-12  |  | Gränssnittsdesign |
