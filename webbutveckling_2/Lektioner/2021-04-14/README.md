@@ -9,8 +9,6 @@
     - [Konsekvenser](#konsekvenser)
 - [Repetition](#repetition)
 - [Problemlösning](#problemlsning)
-- [](#)
-- [](#)
 
 # Plagiat/Fusk
 
