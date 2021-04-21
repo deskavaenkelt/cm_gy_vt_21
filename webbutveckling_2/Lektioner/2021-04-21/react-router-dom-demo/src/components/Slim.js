@@ -1,12 +1,11 @@
-import Title from "../components/Title";
+import Title from "./Title";
 import Lorem from "../components/Lorem";
-import imageSrc from "../Global/img/project.png";
 import ImageSection from "../components/ImageSection";
 import data from "../Global/data";
 
-export default function Project() {
+export default function Slim(props) {
 
-    const index = 1;
+    const { index, imageSrc } = props;
 
     return (
         <>
