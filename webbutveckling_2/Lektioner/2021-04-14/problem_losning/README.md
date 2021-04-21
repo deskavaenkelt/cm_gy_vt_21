@@ -47,7 +47,6 @@ Den ska ha:
     - [x] Ta information från js-objektet
     - [x] stoppa in i getElementById
     - [x] Refactoring
-
 14. Responsiv design
 
 

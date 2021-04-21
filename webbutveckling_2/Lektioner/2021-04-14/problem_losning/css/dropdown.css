@@ -21,6 +21,10 @@
     z-index: 1;
 }
 
+.dropdown-content-link {
+    color: blue;
+}
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
