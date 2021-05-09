@@ -1,4 +1,4 @@
-# Dagens lektion 2021-04-28
+# Lektion 2021-04-28
 
 ## Dagens agenda
 
