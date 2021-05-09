@@ -1,19 +1,8 @@
 # Lektion 2021-04-21
 
-# Dagens agenda
+## Dagens agenda
 
-## Gå igenom
-
-- Hur man dokumenterar
-- Hur det förväntas se ut
-- Dokumentering av er tankeprocess
-- Fortsätta i problemlösningsspåret
-
-# Tips på att läsa på till nästa lektion
-
-- Källor
-- GPS Göteborg
-- 
-
-
-
+- Navigering på en Vanilla sida
+- Navigering i React med React router dom
+- Dela upp i komponenter
+- Återanvända komponenter
