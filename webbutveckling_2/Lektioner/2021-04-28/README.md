@@ -1,5 +1,13 @@
 # Dagens lektion 2021-04-28
 
+## Dagens agenda
+
+- Hur man dokumenterar
+- Hur det förväntas se ut
+- Dokumentering av er tankeprocess
+- Lösa uppgifter enligt problemlösningsspåret
+- Tachyons
+
 ## Arbetsflöde
 
 1. Började med att skapa en arbetsmapp Windows `C:\Git\Lektioner` eller MacOS `~Git\Lektioner`
