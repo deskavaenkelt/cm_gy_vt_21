@@ -63,8 +63,8 @@
 |  1 | 2021-04-07  | Repetition HTML, CSS, JS, Node + NPM, React | Bygga hemsidor med vanilla JavaScript, samt samma i React |
 |  2 | 2021-04-14  | Plagiat/Fusk, Problemlösning, Semantik, Repetition | Hur arbetar man med utveckling |
 |  3 | 2021-04-21  | React-Router-Dom | React forts.  |
-|  4 | 2021-04-28  |  |  |
-|  5 | 2021-05-05  |  | Gränssnittsdesign |
+|  4 | 2021-04-28  | Dokumentation, problemlösning, CSS Frameworks | Hur man dokumenterar, Hur det förväntas se ut, Dokumentering av er tankeprocess, Lösa uppgifter enligt problemlösningsspåret, Tachyons |
+|  5 | 2021-05-05  | Distansundervisning, Gränssnittsdesign | Svårigheterna med distansundervisning, Introduktion till Gränssnittsdesign |
 |  6 | 2021-05-12  |  | Gränssnittsdesign |
 |  7 | 2021-05-19  |  | Gränssnittsdesign |
 |  8 | 2021-05-26  |  |  |
