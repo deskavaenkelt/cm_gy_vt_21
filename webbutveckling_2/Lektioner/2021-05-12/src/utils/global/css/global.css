@@ -1,0 +1,80 @@
+:root {
+    --primary-color: #F7B045;
+    --secondary-color: #4F4F53;
+    --thirdley-color: #CDCFD2
+}
+
+body {
+    margin: 0;
+    font-family: "Alegreya Sans - Regular", serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    /*margin-top: 0px;*/
+}
+
+@font-face {
+    font-family: 'Oleo Script';
+    src: local('Oleo Script'), url('../fonts/OleoScript/OleoScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alegreya Sans - Regular';
+    src: local('Alegreya Sans - Regular'), url('../fonts/AlegreyaSans/AlegreyaSans-Regular.ttf') format('truetype');
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    font-family: 'Oleo Script', serif;
+}
+
+h3, p {
+    font-family: 'Alegreya Sans - Regular', serif;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3, .primary_text, .secondary_text {
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size: 15px;
+}
+
+.primary_text {
+    font-size: 15px;
+}
+
+.secondary_text {
+    font-size: 13px;
+}
+
+.control_labels {
+    color: var(--thirdley-color);
+    font-size: 13px;
+}
+
+.primary_button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #F2F2F2;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.primary_button:hover {
+    background-color: #F2F2F2;
+    color: var(--primary-color);
+}

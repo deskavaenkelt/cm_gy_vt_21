@@ -1,0 +1,63 @@
+.item-a {
+    grid-area: bq;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.upper-main-header-white {
+    color: white;
+}
+
+.upper-main-header-orange {
+    color: var(--primary-color);
+}
+
+.upper-main-link-color {
+    color: white;
+}
+
+.item-b {
+    grid-area: p;
+}
+
+.item-c {
+    grid-area: bg;
+}
+
+.item-d {
+    grid-area: btns;
+}
+
+.upper-main-grid-container {
+    background-color: var(--secondary-color);
+    padding: 32px 96px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+    ". . . . . ."
+    "bq bq bq . bg bg"
+    "p p p . bg bg"
+    ". . . . bg bg"
+    "btns btns btns . . ."
+    ". . . . . .";
+}
+
+.upper-main-button-dark, .upper-main-button-light-grey {
+    padding: 8px 29px;
+    /*margin: 12px 9px;*/
+    cursor: pointer;
+    border: 0;
+    border-radius: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.upper-main-button-dark {
+    background-color: var(--secondary-color);
+    color: var(--thirdley-color);
+}
+
+.upper-main-button-dark:hover {
+    color: white;
+}
