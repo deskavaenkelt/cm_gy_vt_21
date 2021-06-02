@@ -1,0 +1,10 @@
+.center-content {
+    background-color: #9eebcf;
+    max-width: 300px;
+    padding: 10px;
+    margin: auto;
+}
+
+.center-header {
+    text-align: center;
+}
