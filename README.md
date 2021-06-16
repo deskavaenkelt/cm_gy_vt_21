@@ -24,7 +24,7 @@ Material kommer löpande att läggas till löpande
 | Kurs               | Start datum | Slutdatum  | Tenta/Inlämningsuppgift datum |
 | ------------------ | :---------: | :--------: | :---------------------------: |
 | Programmering 1    |             | 2021-04-04 | 2021-04-04 |
-| Webbutveckling 2   | 2021-04-07  | 2021-07-02 | 2021-06-20 |
-| Gränssnittsdesign  | 2021-05-05  | 2021-05-23 | 2021-06-20 | 
+| Webbutveckling 2   | 2021-04-07  | 2021-07-02 | 2021-06-27 |
+| Gränssnittsdesign  | 2021-05-05  | 2021-05-23 | 2021-06-27 | 
 
 

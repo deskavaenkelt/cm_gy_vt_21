@@ -64,14 +64,14 @@
 |  2 | 2021-04-14  | Plagiat/Fusk, Problemlösning, Semantik, Repetition | Hur arbetar man med utveckling |
 |  3 | 2021-04-21  | React-Router-Dom | React forts.  |
 |  4 | 2021-04-28  | Dokumentation, problemlösning, CSS Frameworks | Hur man dokumenterar, Hur det förväntas se ut, Dokumentering av er tankeprocess, Lösa uppgifter enligt problemlösningsspåret, Tachyons |
-|  5 | 2021-05-05  | Distansundervisning, Gränssnittsdesign | Svårigheterna med distansundervisning, Introduktion till Gränssnittsdesign |
-|  6 | 2021-05-12  |  | Gränssnittsdesign |
-|  7 | 2021-05-19  |  | Gränssnittsdesign |
-|  8 | 2021-05-26  |  |  |
-|  9 | 2021-06-02  | Testning | Selenium |
-| 10 | 2021-06-09  |  |  |
-| 11 | 2021-06-16  | Deploya till GitHub |  Lägga upp vår hemsida på GitHub |
-| 12 | 2021-06-23  | Övrigt | Övrigt |
+|  5 | 2021-05-05  | Distansundervisning, Gränssnittsdesign 1 | Svårigheterna med distansundervisning, Introduktion till Gränssnittsdesign |
+|  6 | 2021-05-12  | Vad är UX? | Gränssnittsdesign 2 |
+|  7 | 2021-05-19  | Kopiera design från internet | Webbutveckling 2 |
+|  8 | 2021-05-26  | Roller, UX Processen | Gränssnittsdesign 3 |
+|  9 | 2021-06-02  | Repetition | Förberedelser inför projektinlämningen |
+| 10 | 2021-06-09  | React | useState(), conditionals |
+| 11 | 2021-06-16  | Testning | React Testing Library |
+| 12 | 2021-06-23  | Deploy till GitHub |  Lägga upp vår hemsida på GitHub |
 | 13 | 2021-06-30  | Övrigt | Övrigt |
 
 # Programvaror
