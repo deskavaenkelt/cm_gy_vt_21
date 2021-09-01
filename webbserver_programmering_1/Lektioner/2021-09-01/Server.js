@@ -22,7 +22,7 @@ app.post('/', (req, res) => {
 
 app.post('/name/:input', (req, res) => {
     let input = req.params.input
-    res.send(`Your name is: ${input}`)
+    res.send(`Your name is: ${ input }`)
 })
 
 app.post('/addition/:num1/:num2', (req, res) => {
@@ -34,21 +34,21 @@ app.post('/addition/:num1/:num2', (req, res) => {
     let number1 = Number(req.params.num1)
     let number2 = Number(req.params.num2)
     let sum = number1 + number2
-    res.send(`Summan av talen ${number1} + ${number2} = ${sum}`)
+    res.send(`Summan av talen ${ number1 } + ${ number2 } = ${ sum }`)
 })
 
 app.post('/subtraktion/:num1/:num2', (req, res) => {
     let number1 = Number(req.params.num1)
     let number2 = Number(req.params.num2)
     let sum = number1 - number2
-    res.send(`Subtraction av talen ${number1} - ${number2} = ${sum}`)
+    res.send(`Subtraction av talen ${ number1 } - ${ number2 } = ${ sum }`)
 })
 
 app.post('/multiplikation/:num1/:num2', (req, res) => {
     let number1 = Number(req.params.num1)
     let number2 = Number(req.params.num2)
     let sum = number1 * number2
-    res.send(`Multiplikation av talen ${number1} * ${number2} = ${sum}`)
+    res.send(`Multiplikation av talen ${ number1 } * ${ number2 } = ${ sum }`)
 })
 
 app.post('/division/:num1/:num2', (req, res) => {
@@ -59,7 +59,7 @@ app.post('/division/:num1/:num2', (req, res) => {
         res.send(`Division av 0 är inte tillåtet`);
     } else {
         let sum = number1 / number2;
-        res.send(`Division av talen ${number1} / ${number2} = ${sum}`)
+        res.send(`Division av talen ${ number1 } / ${ number2 } = ${ sum }`)
     }
 })
 
@@ -68,14 +68,22 @@ app.put('/', (req, res) => {
     res.send('Got an PUT request')
 })
 
+app.put('/user/:name', function (req, res) {
+    res.send(`Change something on user with name: ${ req.params.name }`)
+});
+
 // DELETE = Radera något på servern
 app.delete('/', (req, res) => {
     res.send('Got an DELETE request')
 })
 
+app.delete('/user/:id', function (req, res) {
+    res.send(`Deleted user with ID = ${ req.params.id }`)
+})
+
 // Alltid sist i dokumentet
 app.listen(port, () => {
-    console.log(`Servern är igång på port ${port}`)
+    console.log(`Servern är igång på port ${ port }`)
 })
 
 
