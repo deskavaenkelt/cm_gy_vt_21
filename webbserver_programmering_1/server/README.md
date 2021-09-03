@@ -29,6 +29,7 @@ Installera npm paketen:
 
 `nodemon Server.js`
 `npm start Server.js`
+`npx start Server.js`
 
 ## modules
 
