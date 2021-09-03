@@ -208,3 +208,6 @@ Din dokumentation ska utöver det i [Betyg C](#betyg-c) innehålla:
 # Sista inlämningstid
 
 27 Juni kl 23:59
+
+
+- kolla på exempelkod
