@@ -1,10 +1,12 @@
 # Server med Express
 
+Skapa en fil Server.js i en ny arbetsmapp.
+
 `npm init -y`
 
 I ``package.json`` lägg till keywords så filen ser ut så här:
 
-``json
+```json
 {
   "name": "server",
   "version": "1.0.0",
@@ -23,19 +25,23 @@ I ``package.json`` lägg till keywords så filen ser ut så här:
 ```
 
 Installera npm paketen:
+
 - express `npm i express`
 - nodemon: `npm install -D nodemon`
 - eslint: `npm i -D eslint` (frivilligt)
 
-`nodemon Server.js`
-`npm start Server.js`
-`npx start Server.js`
+Start servern med:
+
+- `npm start Server.js`
+- `npx start Server.js`
+- `npm nodemon Server.js`
+- `npx nodemon Server.js`
 
 ## modules
 
-I `package.json` lägg till type så filen ser ut så här:
+I `package.json` lägg till `type` så filen ser ut så här:
 
-``json
+```json
 {
   "name": "server",
   "version": "1.0.0",
@@ -58,6 +64,7 @@ I `package.json` lägg till type så filen ser ut så här:
     "nodemon": "^2.0.12"
   }
 }
+
 ```
 
 - `npm i dotenv`
