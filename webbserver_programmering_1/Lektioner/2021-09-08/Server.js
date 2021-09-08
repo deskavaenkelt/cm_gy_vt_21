@@ -10,6 +10,20 @@ app.use(express.json())
 
 let currentId = 14
 
+function messageUserNotFound() {
+    return {
+        status: 404,
+        text: 'User not found!'
+    }
+}
+
+function messageSuccess(message) {
+    return {
+        status: 200,
+        text: message
+    }
+}
+
 function incrementCurrentIdByOne() {
     currentId += 1
 }
@@ -25,14 +39,15 @@ function createNewUser(userData) {
     inMemoryDatabase.push(user)
 }
 
+function deleteUser(index) {
+    inMemoryDatabase.splice(index, 1)
+}
+
 function updateUser(userData) {
     let index = getUserIndex(userData.id)
 
     if (index === -1) {
-        return {
-            status: 404,
-            text: 'User not found!'
-        }
+        return messageUserNotFound()
     } else {
         if (inMemoryDatabase[index].name !== userData.name) {
             inMemoryDatabase[index].name = userData.name;
@@ -44,11 +59,7 @@ function updateUser(userData) {
             inMemoryDatabase[index].gender = userData.gender
         }
 
-
-        return {
-            status: 200,
-            text: 'User updated!'
-        }
+        return messageSuccess('User updated!')
     }
 }
 
@@ -65,15 +76,20 @@ function getUserById(id) {
     let index = getUserIndex(id)
 
     if (index === -1) {
-        return {
-            status: 404,
-            text: 'User not found!'
-        };
+        return messageUserNotFound()
     } else {
-        return {
-            status: 200,
-            text: inMemoryDatabase[index]
-        }
+        return messageSuccess(inMemoryDatabase[index])
+    }
+}
+
+function deleteUserById(id) {
+    let index = getUserIndex(id)
+
+    if (index === -1) {
+        return messageUserNotFound()
+    } else {
+        deleteUser(index)
+        return messageSuccess('User deleted!')
     }
 }
 
@@ -125,6 +141,11 @@ app.post('/users', function (req, res) {
 
 app.put('/users', function (req, res,) {
     let response = updateUser(req.body)
+    res.status(response.status).send(response.text)
+})
+
+app.delete('/users/:id', function (req, res) {
+    let response = deleteUserById(Number(req.params.id))
     res.status(response.status).send(response.text)
 });
 
