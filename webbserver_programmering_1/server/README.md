@@ -4,7 +4,7 @@
 
 I ``package.json`` lägg till keywords så filen ser ut så här:
 
-``json
+```json
 {
   "name": "server",
   "version": "1.0.0",
@@ -35,7 +35,7 @@ Installera npm paketen:
 
 I `package.json` lägg till type så filen ser ut så här:
 
-``json
+```json
 {
   "name": "server",
   "version": "1.0.0",

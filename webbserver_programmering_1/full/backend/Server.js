@@ -1,14 +1,20 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors'
 
 dotenv.config()
 const app = express()
 const port = process.env.PORT
 
+app.use(cors({
+    origin: '*',
+    methods: ['GET','POST','DELETE','PUT']
+}))
+
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-let currentId = 14
+let currentId = 14;
 
 function messageUserNotFound() {
     return {
