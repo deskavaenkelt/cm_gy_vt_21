@@ -9,7 +9,7 @@ import UpdateUser from './components/UpdateUser'
 
 function App() {
 	return (
-		<>
+		<Wrapper>
 			<SectionTwoColumns>
 				<Article>
 					<H1>Users API with Axios</H1>
@@ -25,12 +25,16 @@ function App() {
 				<UpdateUser/>
 				<DeleteUser/>
 			</SectionThreeColumns>
-		</>
+		</Wrapper>
 	)
 }
 
+const Wrapper = styled.div`
+  background-color: #7F7F85;
+`
+
 const H1 = styled.h1`
-	font-size: 3em;
+  font-size: 3em;
 `
 
 const Article = styled.article`
@@ -44,11 +48,19 @@ const Article = styled.article`
 const SectionTwoColumns = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+  padding: 0 1em 1em 1em;
+
+  &:first-child {
+    padding-top: 1em;
+  }
 `
 
 const SectionThreeColumns = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  padding: 0 1em 1em 1em;
 `
 
 export default App
