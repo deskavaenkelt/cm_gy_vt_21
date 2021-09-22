@@ -1,3 +1,30 @@
+# Frontend with TypeScript
+
+## Installation
+
+Axios
+
+- `npm i axios`
+
+styled-components 
+
+- `npm i styled-components`
+- `npm i @types/styled-components`
+
+[Using styled-components in TypeScript: A tutorial with examples](https://blog.logrocket.com/using-styled-components-in-typescript-a-tutorial-with-examples/)
+
+~~Debug Module~~
+
+- [`npm install debug --save` dont use](https://www.npmjs.com/package/debug)
+
+[why you should not use console.log( ) for debugging ?](https://dev.to/danyson/why-you-should-not-use-console-log-for-debugging-4pgg)
+
+json-to-table
+
+- [`npm i react-json-to-table`](https://www.npmjs.com/package/react-json-to-table)
+
+[React+TypeScript Cheatsheets](https://github.com/typescript-cheatsheets/react)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -10,7 +10,7 @@ const port = 3001; // default port to listen
 // Add a list of allowed origins.
 // If you have more origins you would like to add, you can add them to the array below.
 // const allowedOrigins = ['http://localhost:3000'];
-const allowedOrigins = ['*'];
+const allowedOrigins = '*';
 const allowedMethods = ['GET', 'POST', 'PUT', 'DELETE'];
 
 const options: cors.CorsOptions = {
