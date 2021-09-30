@@ -29,7 +29,7 @@ app.listen(port, () => {
 ```
 
 Next, update `package.json` to instruct `npm` on how to run your application. Change the main property value to point
-to `src/index.js`, and add a `start` script to the `scripts` object.
+to `src/server.js`, and add a `start` script to the `scripts` object.
 
 ```json
   "main": "src/server.js",
@@ -105,7 +105,7 @@ Also, add a couple of scripts to execute TSLint and the TypeScript compiler just
 
 ```json
 {
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
@@ -159,10 +159,19 @@ Create `nodemon.json` configuration file inside root directory.
 
 ```json
 {
-  "ignore": [".git", "node_modules", "dist"],
-  "watch": ["./src"], // <- files inside folder to watch
-  "exec": "npm start", // <- command that will be executed when nodemon starts
-  "ext": "ts"// <- files to watch
+  "ignore": [
+    ".git",
+    "node_modules",
+    "dist"
+  ],
+  "watch": [
+    "./src"
+  ],
+  // <- files inside folder to watch
+  "exec": "npm start",
+  // <- command that will be executed when nodemon starts
+  "ext": "ts"
+  // <- files to watch
 }
 ```
 
@@ -186,8 +195,8 @@ const allowedOrigins = ['http://localhost:3000'];
 const allowedMethods = ['GET', 'POST', 'PUT', 'DELETE'];
 
 const options: cors.CorsOptions = {
-    origin: allowedOrigins,
-    methods: allowedMethods
+	origin: allowedOrigins,
+	methods: allowedMethods
 };
 
 app.use(cors(options))
@@ -196,7 +205,7 @@ app.use(cors(options))
 ### Add JSON support
 
 ```typescript
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 ```
 
@@ -208,12 +217,116 @@ app.use(express.json())
 
 - `npm i winston`
 
+Create folder `utils` in `src`and create file `logger.ts` with content:
+
+```typescript
+import winston from 'winston'
+
+const levels = {
+	error: 0,
+	warn: 1,
+	info: 2,
+	http: 3,
+	debug: 4,
+}
+
+const level = () => {
+	const env = process.env.NODE_ENV || 'development'
+	const isDevelopment = env === 'development'
+	return isDevelopment ? 'debug' : 'warn'
+}
+
+const colors = {
+	error: 'red',
+	warn: 'yellow',
+	info: 'green',
+	http: 'magenta',
+	debug: 'white',
+}
+
+winston.addColors(colors)
+
+const format = winston.format.combine(
+	winston.format.timestamp({format: 'YYYY-MM-DD HH:mm:ss:ms'}),
+	winston.format.colorize({all: true}),
+	winston.format.printf(
+		(info) => `${ info.timestamp } ${ info.level }: ${ info.message }`,
+	),
+)
+
+const transports = [
+	new winston.transports.Console(),
+	new winston.transports.File({
+		filename: 'logs/error.log',
+		level: 'error',
+	}),
+	new winston.transports.File({filename: 'logs/all.log'}),
+]
+
+const Logger = winston.createLogger({
+	level: level(),
+	levels,
+	format,
+	transports,
+})
+
+export default Logger
+```
+
+Logger commands:
+
+```typescript
+Logger.error("This is an error log");
+Logger.warn("This is a warn log");
+Logger.info("This is a info log");
+Logger.http("This is a http log");
+Logger.debug("This is a debug log");
+```
+
 [Better logs for ExpressJS using Winston and Morgan with Typescript](https://levelup.gitconnected.com/better-logs-for-expressjs-using-winston-and-morgan-with-typescript-1c31c1ab9342)
 
 ### Morgan middleware
 
-- `npm i winston`
+- `npm install morgan @types/morgan`
 
+Create folder `config` in `src`and create file `morganMiddleware.ts` with content:
+
+```typescript
+import morgan, { StreamOptions } from "morgan";
+
+import Logger from "../utils/logger";
+
+// Override the stream method by telling
+// Morgan to use our custom logger instead of the console.log.
+const stream: StreamOptions = {
+// Use the http severity
+	write: (message) => Logger.http(message),
+};
+
+// Skip all the Morgan http log if the
+// application is not running in development mode.
+// This method is not really needed here since
+// we already told to the logger that it should print
+// only warning and error messages in production.
+const skip = () => {
+	const env = process.env.NODE_ENV || "development";
+	return env !== "development";
+};
+
+// Build the morgan middleware
+const morganMiddleware = morgan(
+// Define message format string (this is the default one).
+// The message format is made from tokens, and each token is
+// defined inside the Morgan library.
+// You can create your custom token to show what do you want from a request.
+	":method :url :status :res[content-length] - :response-time ms",
+// Options: in this case, I overwrote the stream and the skip logic.
+// See the methods above.
+	{stream, skip}
+);
+
+export default morganMiddleware;
+```
 
 ## Resources
 
