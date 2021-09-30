@@ -6,8 +6,8 @@ function DeleteUser() {
 	const [text, setText] = useState<string>('')
 	const [id, setId] = useState<number>(14)
 	
-	function deleteUserById(userId: number) {
-		http.delete(`/users/${ userId }`)
+	function deleteUserById() {
+		http.delete(`/users/${ id }`)
 			.then(function (response) {
 				console.log(response.data)
 				setText(response.data)
@@ -28,7 +28,7 @@ function DeleteUser() {
 			<br/>
 			
 			<button onClick={ function () {
-				deleteUserById(id)
+				deleteUserById()
 			} }>Delete user
 			</button>
 			<button onClick={ function () {

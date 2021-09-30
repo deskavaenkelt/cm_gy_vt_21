@@ -16,13 +16,12 @@ function UpdateUser() {
 	const [age, setAge] = useState<number>(19)
 	const [gender, setGender] = useState<string>('Female')
 	
-	function updateUser(userId: number, userName: string, userAge: number, userGender: string) {
-		console.log(userId, userName, userAge, userGender)
+	function updateUser() {
 		const payload: User = {
-			'id': userId,
-			'name': userName,
-			'age': userAge,
-			'gender': userGender
+			'id': id,
+			'name': name,
+			'age': age,
+			'gender': gender
 		}
 		console.log(payload)
 		http.put('/users', payload)
@@ -64,7 +63,7 @@ function UpdateUser() {
 			<br/>
 			
 			<button onClick={ function () {
-				updateUser(id, name, age, gender)
+				updateUser()
 			} }>Update user
 			</button>
 			<button onClick={ function () {

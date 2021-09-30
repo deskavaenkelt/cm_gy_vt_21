@@ -14,8 +14,8 @@ function GetUserById() {
 	const [oneUser, setOneUser] = useState<User>()
 	const [id, setId] = useState<number>(14)
 	
-	function getUserById(userId:number) {
-		http.get<User>(`/users/${ userId }`)
+	function getUserById() {
+		http.get<User>(`/users/${ id }`)
 			.then(function (response) {
 				console.log(response.data)
 				setOneUser(response.data)
@@ -33,7 +33,7 @@ function GetUserById() {
 					   value={ id }
 					   onChange={ event => setId(Number(event.target.value)) }/>
 			<button onClick={ function () {
-				getUserById(id)
+				getUserById()
 			} }>getUser</button>
 			<button onClick={ function () {
 				setOneUser(undefined)

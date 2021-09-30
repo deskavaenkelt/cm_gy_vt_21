@@ -14,11 +14,11 @@ function CreateUser() {
 	const [age, setAge] = useState<number>(18)
 	const [gender, setGender] = useState<string>('Female')
 	
-	function createUser(userName: string, userAge: number, userGender: string) {
+	function createUser() {
 		const payload:User = {
-			'name': userName,
-			'age': userAge,
-			'gender': userGender
+			'name': name,
+			'age': age,
+			'gender': gender
 		}
 		http.post('/users', payload)
 			.then(function (response) {
@@ -53,7 +53,7 @@ function CreateUser() {
 			<br/>
 			
 			<button onClick={ function () {
-				createUser(name, age, gender)
+				createUser()
 			} }>Create user
 			</button>
 			<button onClick={ function () {
