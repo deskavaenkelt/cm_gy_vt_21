@@ -1,5 +1,16 @@
 # MongoDB
 
+## RDBMS vs MongoDB
+
+| RDBMS       | MongoDB |
+|-------------|---------|
+| Database    | Database |
+| Table       | Collection |
+| Row         | Document |
+| Column      | Field |
+| Table Join  | Embedded Documents |
+| Primary Key | Default key _id is given by MongoDB |
+
 ## Setup
 
 ### Install
