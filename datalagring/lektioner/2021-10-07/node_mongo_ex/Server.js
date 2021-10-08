@@ -72,6 +72,36 @@ function findAll() {
 }
 findAll()
 
+let myObject = { name: 'Evil Inc.', address: 'Highway in Hell' }
+function updateOne() {
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err
+        let dbo = db.db(dbName)
 
+        let selection_criteria = {name: 'Evil Inc.'}
+        let updated_data = {$set: {address: 'Highway to Hell'}}
+        dbo.collection(collection).updateOne(selection_criteria, updated_data, function (error, result) {
+            if (error) throw error
+            console.log('1 document updated')
+            db.close()
+        })
+    })
+}
+updateOne()
+findAll()
 
+function deleteOne() {
+    MongoClient.connect(url, function (err, db) {
+        if (err) throw err
+        let dbo = db.db(dbName)
 
+        let selection_criteria = {name: 'Evil Inc.'}
+        dbo.collection(collection).deleteOne(selection_criteria, function (error, result) {
+            if (error) throw error
+            console.log('1 document deleted')
+            db.close()
+        })
+    })
+}
+// deleteOne()
+// findAll()
