@@ -6,7 +6,8 @@ import helmet from "helmet";
 import MorganMiddleware from "./middlewares/MorganMiddleware.js";
 import Middlewares from "./middlewares/Middlewares.js"
 import Configuration from "./configuration/Configuration.js"
-
+import mongoose from "mongoose";
+import Logger from "./utils/Logger.js";
 
 dotenv.config()
 const app = express()
@@ -38,6 +39,5 @@ app.get('/', (req, res) => {
 // Place After all valid urls
 app.use(Middlewares.notFound)
 
+Configuration.connectToDatabase()
 Configuration.connectToPort(app)
-
-
