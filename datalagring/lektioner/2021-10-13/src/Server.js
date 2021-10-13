@@ -25,7 +25,7 @@ app.use(cors({
 }))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use(Middlewares.errorHandler)
+app.use(Middlewares?.errorHandler)
 
 app.get('/users', (req, res) => {
     res.send('Users api url')
@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 })
 
 // Place After all valid urls
-app.use(Middlewares.notFound)
+app.use(Middlewares?.notFound)
 
 Configuration.connectToDatabase()
 Configuration.connectToPort(app)
