@@ -9,7 +9,7 @@
 
 ### Create a standard express application:
 
-Create a folder named `src`. In this folder, create a file named `server.js`. Open the file and add the following
+Create a folder named `src`. In this folder, create a file named `Server.js`. Open the file and add the following
 JavaScript.
 
 ```javascript
@@ -29,10 +29,10 @@ app.listen(port, () => {
 ```
 
 Next, update `package.json` to instruct `npm` on how to run your application. Change the main property value to point
-to `src/server.js`, and add a `start` script to the `scripts` object.
+to `src/Server.js`, and add a `start` script to the `scripts` object.
 
 ```json
-  "main": "src/server.js",
+  "main": "src/Server.js",
 "scripts": {
 "start": "node .",
 "test": "echo \"Error: no test specified\" && exit 1"
@@ -105,7 +105,7 @@ Also, add a couple of scripts to execute TSLint and the TypeScript compiler just
 
 ```json
 {
-  "main": "dist/server.js",
+  "main": "dist/Server.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
@@ -115,7 +115,7 @@ Also, add a couple of scripts to execute TSLint and the TypeScript compiler just
   },
 ```
 
-Finally, change the extension of the `src/server.js` file from `.js` to `.ts`, the TypeScript extension, and run the
+Finally, change the extension of the `src/Server.js` file from `.js` to `.ts`, the TypeScript extension, and run the
 start script.
 
 `npm run start`
@@ -313,7 +313,7 @@ const skip = () => {
 	return env !== "development";
 };
 
-// Build the morgan middleware
+// Build the morgan middlewares
 const morganMiddleware = morgan(
 // Define message format string (this is the default one).
 // The message format is made from tokens, and each token is
