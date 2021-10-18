@@ -52,11 +52,11 @@ Vi kommer att använda MongoDB som databas till projektet så tillåtna npm pake
 
 Javascript på backend med hjälp av NODE.js med de paket ni behöver och avgränsat till de paket vi gått igenom.
 
-Då vi använder oss av TODOs så kan ni återanvända/modifiera er inlämning i Webbutveckling 1 eller bygga om backend på nytt så att den använder sig av en MongoDB databas.
+Då vi använder oss av TODOs så kan ni återanvända/modifiera er inlämning i Webbserverprogrammering 1 eller bygga om backend på nytt så att den använder sig av en MongoDB databas.
 
 ### Frontend
 
-Då vi kommer använda oss av vårt API från inlämningen i Webbutveckling 1 så bör ni kunna återanvända eran befintliga frontend. 
+Då vi kommer använda oss av vårt API från inlämningen i Webbserverprogrammering 1 så bör ni kunna återanvända eran befintliga frontend. 
 
 **Så det är _inget krav_ på att tillhandahålla en frontend.**
 
@@ -71,7 +71,7 @@ Tillåtna klienter:
 - Insomnia
 - Postman
 
-Då vi kommer använda oss av vårt API från inlämningen i Webbutveckling 1 så bör ni kunna återanvända era befintliga tester.
+Då vi kommer använda oss av vårt API från inlämningen i Webbserverprogrammering 1 så bör ni kunna återanvända era befintliga tester.
 
 **Så det är _inget krav_ på att tillhandahålla en frontend.**
 
