@@ -6,6 +6,7 @@ import helmet from "helmet";
 import MorganMiddleware from "./middlewares/MorganMiddleware.js";
 import Middlewares from "./middlewares/Middlewares.js"
 import Configuration from "./configuration/Configuration.js"
+import UserRoutes from "./routes/UserRoutes.js"
 import mongoose from "mongoose";
 import Logger from "./utils/Logger.js";
 
@@ -13,7 +14,6 @@ dotenv.config()
 const app = express()
 const mongodb_url = process.env.MONGODB_URL
 const dbName = process.env.MONGODB_DB_NAME
-const dbCollection = process.env.MONGODB_COLLECTION
 
 // Middleware
 app.use(helmet())
@@ -27,14 +27,12 @@ app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(Middlewares?.errorHandler)
 
-app.get('/users', (req, res) => {
-    res.send('Users api url')
-})
-
 // Api alive route
 app.get('/', (req, res) => {
     res.send('Api is Alive!')
 })
+
+UserRoutes.routes(app)
 
 // Place After all valid urls
 app.use(Middlewares?.notFound)
