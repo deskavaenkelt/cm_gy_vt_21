@@ -59,7 +59,6 @@ I `package.json` lägg till keywords så filen ser ut så här:
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "mongodb": "^4.1.3",
     "mongoose": "^6.0.10",
     "morgan": "^1.10.0",
     "winston": "^3.3.3"
@@ -68,7 +67,6 @@ I `package.json` lägg till keywords så filen ser ut så här:
     "nodemon": "^2.0.13"
   }
 }
-
 ```
 
 </details>
