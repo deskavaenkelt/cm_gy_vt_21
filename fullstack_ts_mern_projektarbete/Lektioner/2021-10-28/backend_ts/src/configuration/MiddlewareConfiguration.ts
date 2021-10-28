@@ -1,9 +1,11 @@
 import cors from 'cors'
+import dotenv from 'dotenv'
 import express from 'express'
 import MorganMiddleware from '../middlewares/MorganMiddleware'
 import ExpressApp from './ExpressApp'
 
-const frontendPort = 3000
+dotenv.config()
+const frontendPort = process.env.FRONTEND_PORT
 
 const allowedOrigins = [`http://localhost:${ frontendPort }`]
 const allowedMethods = ['GET', 'POST', 'PUT', 'DELETE']
