@@ -5,7 +5,7 @@ dotenv.config()
 const env = process.env.NODE_ENV
 
 // Own made middlewares
-const notFound = (req: { originalUrl: any; }, res: { status: (arg0: number) => void; }, next: (arg0: Error) => void) => {
+const notFound = (req: any, res: any, next: any) => {
 	const error = new Error(`Not Found: ${ req.originalUrl }`)
 	res.status(StatusCode.NOT_FOUND)
 	next(error)

@@ -9,6 +9,7 @@
 npm init -y
 npm i express dotenv helmet cors mongoose winston morgan
 npm i -D nodemon typescript tslint @types/node @types/express @types/helmet @types/cors @types/mongoose @types/morgan
+npm i -D mocha @types/mocha chai @types/chai chai-http @types/chai-http ts-node ts-mocha @types/expect
 ```
 
 </details>
@@ -18,13 +19,48 @@ npm i -D nodemon typescript tslint @types/node @types/express @types/helmet @typ
 
 ```json
 {
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
   "main": "dist/Server.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.22",
+    "@types/chai-http": "^4.2.0",
+    "@types/cors": "^2.8.12",
+    "@types/expect": "^24.3.0",
+    "@types/express": "^4.17.13",
+    "@types/helmet": "^4.0.0",
+    "@types/mocha": "^9.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^16.11.6",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.4.4"
   }
 }
 ```
@@ -125,7 +161,7 @@ In root folder, create a file named `.env`. Open the file and add the following:
 PORT=3001
 MONGODB_URL=mongodb://localhost:27017/
 MONGODB_DB_NAME=api
-MONGODB_COLLECTION=users
+MONGODB_COLLECTION=user
 NODE_ENV=development
 ```
 
@@ -347,6 +383,8 @@ app.use(notFound)
 app.listen(port, () => {
 	Logger.info(`server started at http://localhost:${ port }`)
 })
+
+export default app
 ```
 
 Now, from the terminal or command line, you can launch the application.
@@ -382,7 +420,57 @@ If all goes well, you should see this message written to the console.
 ## Tests
 
 <details>
-<summary></summary>
+<summary>Testing a TypeScript API With Mocha and Chai</summary>
+
+[source](https://tutorialedge.net/typescript/testing-typescript-api-with-mocha-chai/)
+
+First and foremost, we’ll have to install the libraries that we wish to use to test our systems.
+
+```shell
+npm i chai-http @types/chai-http @types/express @mocha
+```
+
+Once you have installed the above packages, you will have to add the `test` script to your `package.json` file within your project:
+
+```json
+{
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  }
+}
+```
+
+This will subsequently allow you to run `npm run test` within your project, and it will walk through every test file that features `.spec.ts` in its filename.
+
+### A Simple Test
+
+Ok, so we’ve got the necessary libraries installed, how do we then go about using these to test our codebase?
+
+Well, let’s start by writing a really simple `chai` test suite that will test a very simple `/` API endpoint.
+
+Create a file `Server.spec.ts` with content:
+
+```typescript
+import Chai from 'chai'
+import 'mocha'
+import StatusCode from './configuration/StatusCode'
+import app from './Server'
+import chaiHttp = require('chai-http')
+
+Chai.use(chaiHttp)
+const expect = Chai.expect
+
+describe('API Alive Request', () => {
+	it('should return "API is Alive with TypeScript!" on call', () => {
+		return Chai.request(app).get('/')
+			.then(res => {
+				expect(res.text).to.eql('API is Alive with TypeScript!')
+				expect(res.status).to.equal(StatusCode.OK)
+			})
+	})
+})
+```
+
 </details>
 
 
