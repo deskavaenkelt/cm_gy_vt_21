@@ -312,25 +312,25 @@ Create a folder named `src`. In this folder, create a file named `Server.ts`. Op
 JavaScript.
 
 ```typescript
-import express from "express"
-import dotenv from "dotenv"
-import cors from "cors"
-import Logger from "./utils/Logger"
-import MorganMiddleware from './src/middlewares/MorganMiddleware'
+import express from 'express'
+import dotenv from 'dotenv'
+import cors from 'cors'
+import Logger from './utils/Logger'
+import MorganMiddleware from './middlewares/MorganMiddleware'
 import StatusCode from './configuration/StatusCode'
-import { notFound, errorHandler } from './src/middlewares/Middlewares'
+import { notFound, errorHandler } from './middlewares/Middleware'
 
-const app = express();
+const app = express()
 const port = process.env.PORT
 
 // Middlewares
-const allowedOrigins = ['http://localhost:3000'];
-const allowedMethods = ['GET', 'POST', 'PUT', 'DELETE'];
+const allowedOrigins = ['http://localhost:3000']
+const allowedMethods = ['GET', 'POST', 'PUT', 'DELETE']
 
 const options: cors.CorsOptions = {
 	origin: allowedOrigins,
 	methods: allowedMethods
-};
+}
 
 app.use(cors(options))
 app.use(express.urlencoded({extended: false}))
@@ -338,9 +338,9 @@ app.use(express.json())
 app.use(MorganMiddleware)
 app.use(errorHandler)
 
-app.get("/", (req, res) => {
-	res.status(StatusCode.OK).send("API is Alive!")
-});
+app.get('/', (req, res) => {
+	res.status(StatusCode.OK).send('API is Alive with TypeScript!')
+})
 
 app.use(notFound)
 
