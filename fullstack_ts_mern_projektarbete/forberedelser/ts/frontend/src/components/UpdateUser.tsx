@@ -1,30 +1,26 @@
 import React, { useState } from 'react'
+import { JsonToTable } from 'react-json-to-table'
 import styled from 'styled-components'
 import http from '../utils/api/UsersApi'
 
 interface User {
-	id: number;
-	name: string,
-	age: number,
-	gender: string,
+	username: string,
+	password: string,
 }
 
 function UpdateUser() {
 	const [text, setText] = useState<string>('')
-	const [id, setId] = useState<number>(14)
-	const [name, setName] = useState<string>('Ada')
-	const [age, setAge] = useState<number>(19)
-	const [gender, setGender] = useState<string>('Female')
+	const [id, setId] = useState<string>('')
+	const [username, setUsername] = useState<string>('Ada')
+	const [password, setPassword] = useState<string>('NewSecretPassword')
 	
 	function updateUser() {
 		const payload: User = {
-			'id': id,
-			'name': name,
-			'age': age,
-			'gender': gender
+			username: username,
+			password: password,
 		}
 		console.log(payload)
-		http.put('/users', payload)
+		http.put(`/users/${id}`, payload)
 			.then(function (response) {
 				console.log(response.data)
 				setText(response.data)
@@ -38,28 +34,22 @@ function UpdateUser() {
 		<Article>
 			<h1>Uppdatera en användare</h1>
 			
-			Id: <input type='number'
+			Id: <input type='text'
 					   id='id'
 					   value={ id }
-					   onChange={ event => setId(Number(event.target.value)) }/>
+					   onChange={ event => setId(event.target.value) }/>
 			<br/>
 			
-			Name: <input type='text'
+			Username: <input type='text'
 						 id='name'
-						 value={ name }
-						 onChange={ event => setName(event.target.value) }/>
+						 value={ username }
+						 onChange={ event => setUsername(event.target.value) }/>
 			<br/>
 			
-			Age: <input type='number'
+			Password: <input type='text'
 						id='age'
-						value={ age }
-						onChange={ event => setAge(Number(event.target.value)) }/>
-			<br/>
-			
-			Gender: <input type='text'
-						   id='gender'
-						   value={ gender }
-						   onChange={ event => setGender(event.target.value) }/>
+						value={ password }
+						onChange={ event => setPassword(event.target.value) }/>
 			<br/>
 			
 			<button onClick={ function () {
@@ -70,7 +60,8 @@ function UpdateUser() {
 				setText('')
 			} }>clear
 			</button>
-			<p>{ text }</p>
+			{/*<p>{ text }</p>*/}
+			<JsonToTable json={ text }/>
 		</Article>
 	)
 }

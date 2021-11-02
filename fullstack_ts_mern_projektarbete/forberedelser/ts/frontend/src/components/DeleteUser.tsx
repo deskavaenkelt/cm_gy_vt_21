@@ -4,13 +4,13 @@ import http from '../utils/api/UsersApi'
 
 function DeleteUser() {
 	const [text, setText] = useState<string>('')
-	const [id, setId] = useState<number>(14)
+	const [id, setId] = useState<string>('')
 	
 	function deleteUserById() {
 		http.delete(`/users/${ id }`)
 			.then(function (response) {
 				console.log(response.data)
-				setText(response.data)
+				setText(response.data.message)
 			})
 			.catch(function (error) {
 				console.log(error)
@@ -21,10 +21,10 @@ function DeleteUser() {
 		<Article>
 			<h1>Radera en användare</h1>
 			
-			Id: <input type='number'
+			Id: <input type='text'
 					   id='id'
 					   value={ id }
-					   onChange={ event => setId(Number(event.target.value)) }/>
+					   onChange={ event => setId(event.target.value) }/>
 			<br/>
 			
 			<button onClick={ function () {

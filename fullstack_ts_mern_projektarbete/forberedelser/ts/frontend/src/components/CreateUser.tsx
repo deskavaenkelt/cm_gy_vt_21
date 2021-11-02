@@ -1,28 +1,27 @@
 import React, { useState } from 'react'
+import { JsonToTable } from 'react-json-to-table'
 import styled from 'styled-components'
 import http from '../utils/api/UsersApi'
 
 interface User {
-	name: string,
-	age: number,
-	gender: string,
+	username: string,
+	password: string,
 }
 
 function CreateUser() {
 	const [text, setText] = useState<string>('')
-	const [name, setName] = useState<string>('Ada')
-	const [age, setAge] = useState<number>(18)
-	const [gender, setGender] = useState<string>('Female')
+	const [username, setUsername] = useState<string>('Ada')
+	const [password, setPassword] = useState<string>('SecretPassword')
 	
 	function createUser() {
-		const payload:User = {
-			'name': name,
-			'age': age,
-			'gender': gender
+		const payload: User = {
+			username: username,
+			password: password,
 		}
 		http.post('/users', payload)
 			.then(function (response) {
 				console.log(response.data)
+				// setText(`${response.data.username} created!`)
 				setText(response.data)
 			})
 			.catch(function (error) {
@@ -34,22 +33,16 @@ function CreateUser() {
 		<Article>
 			<h1>Skapa en användare</h1>
 			
-			Name: <input type='text'
-						 id='name'
-						 value={ name }
-						 onChange={ event => setName(event.target.value) }/>
+			Username: <input type='text'
+							 id='name'
+							 value={ username }
+							 onChange={ event => setUsername(event.target.value) }/>
 			<br/>
 			
-			Age: <input type='number'
-						id='age'
-						value={ age }
-						onChange={ event => setAge(Number(event.target.value)) }/>
-			<br/>
-			
-			Gender: <input type='text'
-						   id='gender'
-						   value={ gender }
-						   onChange={ event => setGender(event.target.value) }/>
+			Password: <input type='text'
+							 id='age'
+							 value={ password }
+							 onChange={ event => setPassword(event.target.value) }/>
 			<br/>
 			
 			<button onClick={ function () {
@@ -60,7 +53,8 @@ function CreateUser() {
 				setText('')
 			} }>clear
 			</button>
-			<p>{ text }</p>
+			{/*<p>{ text }</p>*/}
+			<JsonToTable json={ text }/>
 		</Article>
 	)
 }

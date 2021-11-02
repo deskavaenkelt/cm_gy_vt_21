@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import http from '../utils/api/UsersApi'
-import { JsonToTable } from "react-json-to-table";
+import { JsonToTable } from 'react-json-to-table'
 
 interface User {
 	id: number;
@@ -12,7 +12,7 @@ interface User {
 
 function GetUserById() {
 	const [oneUser, setOneUser] = useState<User>()
-	const [id, setId] = useState<number>(14)
+	const [id, setId] = useState<string>('616718bda4ab77e25e33ec5b')
 	
 	function getUserById() {
 		http.get<User>(`/users/${ id }`)
@@ -28,19 +28,20 @@ function GetUserById() {
 	return (
 		<Article>
 			<h1>Hämta en användare</h1>
-			Id: <input type='number'
+			Id: <Input type='text'
 					   id='id'
 					   value={ id }
-					   onChange={ event => setId(Number(event.target.value)) }/>
+					   onChange={ event => setId(event.target.value) }/>
 			<button onClick={ function () {
 				getUserById()
-			} }>getUser</button>
+			} }>getUser
+			</button>
 			<button onClick={ function () {
 				setOneUser(undefined)
 			} }>clear
 			</button>
 			<br/>
-			<JsonToTable json={oneUser}/>
+			<JsonToTable json={ oneUser }/>
 		</Article>
 	)
 }
@@ -50,6 +51,10 @@ const Article = styled.article`
   border: 1px solid black;
   border-radius: 1em;
   background-color: cadetblue;
+`
+
+const Input = styled.input`
+  width: 200px;
 `
 
 export default GetUserById
