@@ -9,7 +9,7 @@
 npm init -y
 npm i express dotenv helmet cors mongoose winston morgan
 npm i -D nodemon typescript tslint @types/node @types/express @types/helmet @types/cors @types/mongoose @types/morgan
-npm i -D mocha @types/mocha chai @types/chai chai-http @types/chai-http ts-node ts-mocha @types/expect
+npm i -D mocha @types/mocha chai @types/chai chai-http @types/chai-http ts-node ts-mocha @types/expect ts-node-dev
 ```
 
 </details>
@@ -399,6 +399,9 @@ or
 If all goes well, you should see this message written to the console.
 
 `server started at http://localhost:3001`
+
+`npm run startts`
+
 
 </details>
 
