@@ -3,10 +3,10 @@ import Logger from '../utils/Logger'
 import StatusCode from '../configuration/StatusCode'
 import { Request, Response } from 'express'
 
-// interface CreateUser {
-// 	username: string;
-// 	password: string;
-// }
+interface CreateUser {
+	username: string;
+	password: string;
+}
 //
 // interface CreateUserBody {
 // 	body: CreateUser
@@ -21,7 +21,7 @@ import { Request, Response } from 'express'
 
 const createUser = async (req: Request, res: Response) => {
 	Logger.http(req.body)
-	const {username, password} = req.body
+	const {username, password} : CreateUser = req.body
 	const user = new UserModel({
 		username,
 		password
