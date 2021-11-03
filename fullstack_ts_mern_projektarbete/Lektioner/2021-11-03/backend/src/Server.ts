@@ -7,7 +7,7 @@ import StatusCode from './configurations/StatusCode'
 import { notFound, errorHandler } from './middlewares/Middleware'
 
 const app = express()
-const port = process.env.PORT
+const port = process.env.SERVER_PORT
 
 // Middlewares
 const allowedOrigins = ['http://localhost:3000']
