@@ -312,7 +312,7 @@ In `configurations`-folder create `Middleware.ts` with content:
 
 ```typescript
 import dotenv from 'dotenv'
-import StatusCode from '../configuration/StatusCode'
+import StatusCode from '../configurations/StatusCode'
 
 dotenv.config()
 const env = process.env.NODE_ENV
@@ -334,7 +334,7 @@ const errorHandler = (error: any, req: any, res: any, next: any) => {
 	})
 }
 
-export default {
+export {
 	notFound,
 	errorHandler
 }
@@ -354,7 +354,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 import Logger from './utils/Logger'
 import MorganMiddleware from './middlewares/MorganMiddleware'
-import StatusCode from './configuration/StatusCode'
+import StatusCode from './configurations/StatusCode'
 import { notFound, errorHandler } from './middlewares/Middleware'
 
 const app = express()
