@@ -28,6 +28,7 @@ npm i -D mocha @types/mocha chai @types/chai chai-http @types/chai-http ts-node 
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
+    "startts": "ts-node-dev src/Server.ts",
     "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
