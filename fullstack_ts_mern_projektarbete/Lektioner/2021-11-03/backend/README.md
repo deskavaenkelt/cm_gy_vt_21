@@ -159,7 +159,7 @@ Add additional script for nodemon inside package.json scripts.
 In root folder, create a file named `.env`. Open the file and add the following:
 
 ```env
-PORT=3001
+SERVER_PORT=3001
 MONGODB_URL=mongodb://localhost:27017/
 MONGODB_DB_NAME=api
 MONGODB_COLLECTION=user
