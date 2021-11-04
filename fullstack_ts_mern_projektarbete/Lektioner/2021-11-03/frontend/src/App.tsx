@@ -5,6 +5,7 @@ import CreateUser from './components/CreateUser'
 import DeleteUser from './components/DeleteUser'
 import GetUsers from './components/GetUsers'
 import GetUsersById from './components/GetUsersById'
+import OneUserInJsonToTable from './components/OneUserInJsonToTable'
 import UpdateUser from './components/UpdateUser'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 				<UpdateUser/>
 				<DeleteUser/>
 			</SectionThreeColumns>
+			<OneUserInJsonToTable/>
 		</Wrapper>
 	)
 }

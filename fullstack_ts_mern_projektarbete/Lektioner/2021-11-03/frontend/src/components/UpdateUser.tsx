@@ -46,7 +46,7 @@ function UpdateUser() {
 			
 			<div>
 				Password:
-				<Input type='text'
+				<Input type='password'
 					   value={ passWord }
 					   onChange={ event => setPassWord(event.target.value) }/>
 			</div>
