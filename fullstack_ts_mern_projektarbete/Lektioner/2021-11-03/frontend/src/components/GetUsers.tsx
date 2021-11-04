@@ -2,15 +2,15 @@ import { useState } from 'react'
 import { JsonToTable } from 'react-json-to-table'
 import styled from 'styled-components'
 import http from '../utils/api/UsersApi'
-import { User } from '../utils/interfaces/User'
+import { UserDataObject } from '../utils/interfaces/UserData'
 
 
 function GetUsers() {
-	const initialState: Array<User> = []
-	const [allUsersInDatabase, setAllUsersInDatabase] = useState<Array<User>>(initialState)
+	const initialState: Array<UserDataObject> = []
+	const [allUsersInDatabase, setAllUsersInDatabase] = useState<Array<UserDataObject>>(initialState)
 	
 	function getUsers() {
-		http.get<User[]>('/users')
+		http.get<UserDataObject[]>('/users')
 			.then(function (response) {
 				console.log(response.data)
 				setAllUsersInDatabase(response.data)

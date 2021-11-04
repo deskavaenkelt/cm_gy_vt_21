@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { JsonToTable } from 'react-json-to-table'
 import styled from 'styled-components'
 import http from '../utils/api/UsersApi'
-import { User } from '../utils/interfaces/User'
+import { UserDataObject } from '../utils/interfaces/UserData'
 
 function GetUsersById() {
-	const [oneUser, setOneUser] = useState<User>()
+	const [oneUser, setOneUser] = useState<UserDataObject>()
 	const [id, setId] = useState<string>('616718bda4ab77e25e33ec5b')
 	
 	function getUsers() {
-		http.get<User>(`/users/${ id }`)
+		http.get<UserDataObject>(`/users/${ id }`)
 			.then(function (response) {
 				console.log(response.data)
 				setOneUser(response.data)
@@ -25,7 +25,7 @@ function GetUsersById() {
 			Id: <Input type='text'
 					   value={ id }
 					   onChange={ event => setId(event.target.value) }/>
-			<Button onClick={ getUsers }>getUsers</Button>
+			<Button onClick={ getUsers }>getUser</Button>
 			<Button onClick={ () => setOneUser(undefined) }>clear</Button>
 			<JsonToTable json={ oneUser }/>
 		</Article>
