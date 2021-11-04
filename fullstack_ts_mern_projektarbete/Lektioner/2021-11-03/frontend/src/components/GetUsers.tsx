@@ -2,14 +2,8 @@ import { useState } from 'react'
 import { JsonToTable } from 'react-json-to-table'
 import styled from 'styled-components'
 import http from '../utils/api/UsersApi'
+import { User } from '../utils/interfaces/User'
 
-interface User {
-	_id: string;
-	username: string;
-	password: string;
-	createdAt: string;
-	updatedAt: string;
-}
 
 function GetUsers() {
 	const initialState: Array<User> = []
