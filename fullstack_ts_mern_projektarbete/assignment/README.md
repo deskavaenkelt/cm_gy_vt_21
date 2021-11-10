@@ -96,7 +96,7 @@ Ni bör ha separata databaser för development och production.
 
 ### Övrigt
 
-- Ni ska använda er av Trello för projektplanering
+- Ni ska använda er av Jira för projektplanering
 - Strukturera upp ert arbete
 - Dokumentation på ert arbete
 
