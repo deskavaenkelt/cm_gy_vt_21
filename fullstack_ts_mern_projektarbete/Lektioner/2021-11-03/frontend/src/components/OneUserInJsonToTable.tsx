@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { UserDataObjectWithDate } from '../utils/interfaces/UserData'
+import { UserDataObject, UserDataObjectWithDate } from '../utils/interfaces/UserData'
 
-export default function OneUserInJsonToTable() {
+export default function OneUserInJsonToTable(props: Array<UserDataObject>) {
 	const oneUser: UserDataObjectWithDate = {
 		_id: '6183cf6bc1b80a97972358da',
 		username: 'Ada',
@@ -19,10 +19,10 @@ export default function OneUserInJsonToTable() {
 		const time = dt[1].split('.')[0]
 		
 		return (
-			<Tr>
-				<Td>{ oneUser._id }</Td>
-				<Td>{ oneUser.username }</Td>
-				<Td>{ oneUser.password }</Td>
+			<Tr key={userObject._id}>
+				<Td>{ userObject._id }</Td>
+				<Td>{ userObject.username }</Td>
+				<Td>{ userObject.password }</Td>
 				<Td>{ date + ' - ' + time }</Td>
 			</Tr>
 		)
