@@ -1,0 +1,49 @@
+version: '3.7'
+
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: user-app-server
+    container_name: user-node-server
+    command: /usr/src/app/node_modules/.bin/nodemon Server.js
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3001:3001"
+    env_file: ./server/.env
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - user-app-network
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: user-app-client
+    container_name: user-react-client
+    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    networks:
+      - user-app-network
+
+networks:
+  user-app-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local

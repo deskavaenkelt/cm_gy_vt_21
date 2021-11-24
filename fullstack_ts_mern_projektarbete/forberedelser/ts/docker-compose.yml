@@ -1,0 +1,50 @@
+version: "3.9"
+services:
+#  mongo:
+#    image: mongo
+#    volumes:
+#      - data-volume:/data/db
+#    ports:
+#      - "27017:27017"
+#    networks:
+#      - mern-network
+
+  server:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: myapp-server
+    container_name: myapp-node-server
+    command: /usr/src/app/node_modules/.bin/nodemon dist/Server.js
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+    env_file: ./backend/.env
+    environment:
+      - NODE_ENV=development
+    networks:
+      - mern-network
+
+#  frontend:
+#    build:
+#     context: ./frontend
+#     dockerfile: Dockerfile_MultiStage
+#    container_name: myapp-react-client
+#    ports:
+#      - "80:80"
+#    depends_on:
+#      - server
+
+networks:
+  mern-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local

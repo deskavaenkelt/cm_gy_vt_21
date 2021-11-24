@@ -19,7 +19,7 @@ npm i -D mocha @types/mocha chai @types/chai chai-http @types/chai-http ts-node 
 
 ```json
 {
-  "name": "backend",
+  "name": "server",
   "version": "1.0.0",
   "description": "",
   "main": "dist/Server.js",
@@ -28,6 +28,7 @@ npm i -D mocha @types/mocha chai @types/chai chai-http @types/chai-http ts-node 
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node .",
+    "startts": "ts-node-dev src/Server.ts",
     "start:nodemon": "./node_modules/nodemon/bin/nodemon.js",
     "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
@@ -387,13 +388,11 @@ app.listen(port, () => {
 export default app
 ```
 
-Now, from the terminal or command line, you can launch the application.
+Now, from the terminal or command line, you can launch the application with one of the following commands.
 
-`npm run start`
-
-or
-
-`npm run start:nodemon`
+- `npm run start`
+- `npm run start:nodemon`
+- `npm run startts`
 
 If all goes well, you should see this message written to the console.
 

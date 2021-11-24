@@ -1,0 +1,60 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - todo-app-network
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: todo-app-server
+    container_name: todo-node-server
+    command: /usr/src/app/node_modules/.bin/nodemon server.js
+    volumes:
+      - ./server/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongo
+    env_file: ./server/.env
+    environment:
+      - PORT=3001
+      - MONGODB_URL=mongodb://localhost:27017/
+      - MONGODB_DB_NAME=api
+      - MONGODB_COLLECTION=Girlie-MongoDB-assignment
+      - NODE_ENV=development
+    networks:
+      - todo-app-network
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    image: todo-app-client
+    container_name: todo-react-client
+    command: npm start
+    volumes:
+      - ./client/:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - todo-app-network
+
+networks:
+  todo-app-network:
+    driver: bridge
+
+volumes:
+  data-volume:
+  node_modules:
+  web-root:
+    driver: local
