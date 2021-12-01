@@ -1,10 +1,11 @@
 import React from 'react'
+import NavigationBar from './components/NavigationBar'
 import { Routing } from './routes/Routing'
 
 function App() {
 	return (
 		<Routing>
-			<h1>App Children</h1>
+			<NavigationBar/>
 		</Routing>
 	)
 }
