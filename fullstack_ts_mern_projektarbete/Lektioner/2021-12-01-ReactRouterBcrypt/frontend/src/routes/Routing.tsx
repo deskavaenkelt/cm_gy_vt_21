@@ -3,6 +3,8 @@ import { Route } from 'react-router'
 import { BrowserRouter, Navigate, Routes } from 'react-router-dom'
 import CounterView from '../view/CounterView'
 import HomeView from '../view/HomeView'
+import { PageNotFoundView } from '../view/PageNotFoundView'
+import { SignInView } from '../view/SignInView'
 import RoutingPath from './RoutingPath'
 
 export const Routing = (props: { children?: React.ReactChild }) => {
@@ -11,8 +13,11 @@ export const Routing = (props: { children?: React.ReactChild }) => {
 		<BrowserRouter>
 			{ props.children }
 			<Routes>
+				<Route path={ RoutingPath.wildCardView } element={ <Navigate to={ RoutingPath.notFoundView }/> }/>
 				<Route path={ RoutingPath.homeView } element={ <HomeView/> }/>
 				<Route path={ RoutingPath.counterView } element={ <CounterView/> }/>
+				<Route path={ RoutingPath.notFoundView } element={ <PageNotFoundView/> }/>
+				<Route path={ RoutingPath.signInView } element={ <SignInView/> }/>
 			</Routes>
 		</BrowserRouter>
 	)
