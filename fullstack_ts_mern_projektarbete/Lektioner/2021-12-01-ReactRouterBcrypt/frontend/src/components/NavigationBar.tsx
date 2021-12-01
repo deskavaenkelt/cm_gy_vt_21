@@ -3,10 +3,17 @@ import styled from 'styled-components'
 import { Link, Outlet } from 'react-router-dom'
 import RoutingPath from '../routes/RoutingPath'
 import { useUserContext } from '../shared/global/provider/UserProvider'
+import Profile from './Profile'
 
 const NavigationBar = () => {
 	const {authenticatedUser} = useUserContext()
-
+	
+	const displayUserIfAuthenticated = () => {
+		return (authenticatedUser)
+			? <LiRight><Profile/></LiRight>
+			: <LiRight><Link to={ RoutingPath.signInView }>Sign In</Link></LiRight>
+	}
+	
 	return (
 		<>
 			<nav>
@@ -14,8 +21,8 @@ const NavigationBar = () => {
 					<LiLeft><Link to={ RoutingPath.homeView }>Home</Link></LiLeft>
 					<LiLeft><Link to={ RoutingPath.counterView }>Counter</Link></LiLeft>
 					<LiLeft><Link to={ RoutingPath.somethingElseView }>Not found</Link></LiLeft>
-					<LiRight><Link to={ RoutingPath.signInView }>Sign In</Link></LiRight>
-					<LiRight><Span>{ authenticatedUser }</Span></LiRight>
+					
+					{ displayUserIfAuthenticated() }
 				</Ul>
 			</nav>
 			<Outlet/>

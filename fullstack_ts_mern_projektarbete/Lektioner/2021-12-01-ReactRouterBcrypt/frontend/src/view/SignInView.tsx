@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { PrimaryButton } from '../components/CustomButtonComponent'
+import RoutingPath from '../routes/RoutingPath'
 import { useUserContext } from '../shared/global/provider/UserProvider'
 
 export const SignInView = () => {
@@ -8,9 +10,13 @@ export const SignInView = () => {
 	const [password, setPassword] = useState<string>()
 	const {authenticatedUser, setAuthenticatedUser} = useUserContext()
 	
+	const navigate = useNavigate()
+	
 	const login = () => {
 		if (typeof username === 'string') {
 			setAuthenticatedUser(username)
+			localStorage.setItem('username', username)
+			navigate(RoutingPath.homeView)
 		}
 	}
 	
