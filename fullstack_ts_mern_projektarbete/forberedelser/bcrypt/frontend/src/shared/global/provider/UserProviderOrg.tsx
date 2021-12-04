@@ -2,13 +2,12 @@ import { createContext, useContext } from 'react'
 
 export type AuthenticatedContent = {
 	authenticatedUser: string
-	setAuthenticatedUser: (c: string) => void
+	setAuthenticatedUser: (username: string) => void
 }
 
 export const UserContext = createContext<AuthenticatedContent>({
 	authenticatedUser: '', 			// set a default value
-	setAuthenticatedUser: () => {
-	}
+	setAuthenticatedUser: () => {}
 })
 
 export const useUserContext = () => useContext(UserContext)

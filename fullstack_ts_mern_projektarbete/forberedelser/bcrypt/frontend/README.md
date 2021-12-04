@@ -9,7 +9,7 @@ Install Axios and styled-components
 ```shell
 npx create-react-app client --template typescript
 cd client
-npm i axios styled-components @types/styled-components  react-router-dom @types/react-router-dom
+npm i axios styled-components @types/styled-components  react-router-dom @types/react-router-dom react-json-to-table
 
 
 ```

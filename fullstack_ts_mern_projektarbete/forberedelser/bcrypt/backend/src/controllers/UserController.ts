@@ -8,7 +8,7 @@ import Logger from '../utils/Logger'
 const createUser = async (req: Request, res: Response) => {
 	Logger.http(req.body)
 	let {username, password}: CreateUser = req.body
-	
+
 	const saltRounds: number = 10
 	await bcrypt.hash(password, saltRounds).then(function (hash) {
 		password = hash
@@ -41,10 +41,10 @@ const verifyUser = async (req: Request, res: Response) => {
 		}
 		const query: SearchUser = {username: String(username)}
 		const dbResult = await UserModel.find(query)
-		
+
 		// const dbResult = await UserModel.findById(userId)
 		Logger.debug('dbResult ' + dbResult)
-		
+
 		let response: VerifyUser
 		await bcrypt.compare(password, dbResult[0].password).then(function (result) {
 			Logger.debug('bcrypt')
@@ -52,7 +52,7 @@ const verifyUser = async (req: Request, res: Response) => {
 				message: result
 			}
 		})
-		
+
 		res.status(StatusCode.OK).send(response)
 	} catch (error) {
 		res.status(StatusCode.INTERNAL_SERVER_ERROR).send({
