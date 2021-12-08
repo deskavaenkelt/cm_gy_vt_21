@@ -8,6 +8,7 @@ import { PageNotFoundView } from '../view/PageNotFoundView'
 import ProfileView from '../view/ProfileView'
 import SettingsView from '../view/SettingsView'
 import { SignInView } from '../view/SignInView'
+import UsersView from '../view/UsersView'
 import RoutingPath from './RoutingPath'
 
 export const Routing = (props: { children?: React.ReactChild }) => {
@@ -24,6 +25,7 @@ export const Routing = (props: { children?: React.ReactChild }) => {
 				<Route path={ RoutingPath.settingsView } element={ <SettingsView/> }/>
 				<Route path={ RoutingPath.profileView } element={ <ProfileView/> }/>
 				<Route path={ RoutingPath.axiosView } element={ <AxiosView/> }/>
+				<Route path={ RoutingPath.usersView } element={ <UsersView/> }/>
 			</Routes>
 		</BrowserRouter>
 	)

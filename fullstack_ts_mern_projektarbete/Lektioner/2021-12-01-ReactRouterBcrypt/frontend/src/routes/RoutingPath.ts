@@ -8,6 +8,7 @@ const RoutingPath = {
 	settingsView: '/settings',
 	profileView: '/profile',
 	axiosView: '/axios',
+	usersView: '/users',
 }
 
 export default RoutingPath
