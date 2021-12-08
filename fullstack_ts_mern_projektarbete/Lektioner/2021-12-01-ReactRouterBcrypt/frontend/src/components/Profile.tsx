@@ -19,11 +19,11 @@ const Profile = () => {
 	return (
 		<ProfileWrapper className='profileWrapper'>
 			<Img src={ imgUrl }/>
-			<Span>{ authenticatedUser }</Span>
+			<SpanUserName>{ authenticatedUser }</SpanUserName>
 			
 			<div className='profileDropdown'>
-				<Span>Settings</Span>
-				<Span>Profile</Span>
+				<Span onClick={ () => navigate(RoutingPath.settingsView) }>Settings</Span>
+				<Span onClick={ () => navigate(RoutingPath.profileView) }>Profile</Span>
 				<hr/>
 				<Span onClick={ () => logout() }>Logout</Span>
 			</div>
@@ -50,4 +50,12 @@ const Span = styled.span`
   align-self: center;
   cursor: pointer;
   padding: 5px 10px;
+`
+
+const SpanUserName = styled.span`
+  display: block;
+  align-self: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: yellowgreen;
 `

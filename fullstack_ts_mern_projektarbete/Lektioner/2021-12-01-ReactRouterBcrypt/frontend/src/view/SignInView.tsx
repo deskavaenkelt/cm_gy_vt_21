@@ -6,17 +6,26 @@ import RoutingPath from '../routes/RoutingPath'
 import { useUserContext } from '../shared/global/provider/UserProvider'
 
 export const SignInView = () => {
-	const [username, setUsername] = useState<string>()
-	const [password, setPassword] = useState<string>()
+	// TODO: Radera vid koppling till databas
+	const myUser = {
+		username: 'Admin',
+		password: 'MyPass'
+	}
+	
+	const [username, setUsername] = useState<string>(myUser.username)
+	const [password, setPassword] = useState<string>(myUser.password)
+	const [loginText, setLoginText] = useState<string>('')
 	const {authenticatedUser, setAuthenticatedUser} = useUserContext()
 	
 	const navigate = useNavigate()
 	
 	const login = () => {
-		if (typeof username === 'string') {
+		if (username === myUser.username && password === myUser.password) {
 			setAuthenticatedUser(username)
 			localStorage.setItem('username', username)
 			navigate(RoutingPath.homeView)
+		} else {
+			setLoginText('Wrong username or password')
 		}
 	}
 	
@@ -24,13 +33,12 @@ export const SignInView = () => {
 		<Wrapper>
 			<h1>Sign In</h1>
 			<GridContainer>
-				<span>{ username }</span>
-				<span>{ password }</span>
 				<Span>Username: </Span>
 				<input type='text' onChange={ event => setUsername(event.target.value) }/>
 				<Span>Password: </Span>
 				<input type='password' onChange={ event => setPassword(event.target.value) }/>
 			</GridContainer>
+			<H3>{ loginText }</H3>
 			<PrimaryButton onClick={ () => login() } children={ 'Log In' }/>
 			<PrimaryButton onClick={ () => alert(authenticatedUser) } children={ 'Show user' }/>
 		</Wrapper>
@@ -53,4 +61,9 @@ const GridContainer = styled.div`
 
 const Span = styled.span`
 
+`
+
+const H3 = styled.h3`
+  color: red;
+  font-weight: bold;
 `

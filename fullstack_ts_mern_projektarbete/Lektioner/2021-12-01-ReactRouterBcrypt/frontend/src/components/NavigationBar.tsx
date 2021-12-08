@@ -72,7 +72,3 @@ const LiRight = styled.li`
     background-color: #111;
   }
 `
-
-const Span = styled.span`
-  color: yellowgreen;
-`

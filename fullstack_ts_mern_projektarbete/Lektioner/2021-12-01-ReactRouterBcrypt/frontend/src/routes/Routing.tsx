@@ -4,6 +4,8 @@ import { BrowserRouter, Navigate, Routes } from 'react-router-dom'
 import CounterView from '../view/CounterView'
 import HomeView from '../view/HomeView'
 import { PageNotFoundView } from '../view/PageNotFoundView'
+import ProfileView from '../view/ProfileView'
+import SettingsView from '../view/SettingsView'
 import { SignInView } from '../view/SignInView'
 import RoutingPath from './RoutingPath'
 
@@ -18,6 +20,8 @@ export const Routing = (props: { children?: React.ReactChild }) => {
 				<Route path={ RoutingPath.counterView } element={ <CounterView/> }/>
 				<Route path={ RoutingPath.notFoundView } element={ <PageNotFoundView/> }/>
 				<Route path={ RoutingPath.signInView } element={ <SignInView/> }/>
+				<Route path={ RoutingPath.settingsView } element={ <SettingsView/> }/>
+				<Route path={ RoutingPath.profileView } element={ <ProfileView/> }/>
 			</Routes>
 		</BrowserRouter>
 	)
