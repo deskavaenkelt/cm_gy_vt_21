@@ -6,7 +6,8 @@ const RoutingPath = {
 	somethingElseView: '/somethingElse',
 	signInView: '/signIn',
 	settingsView: '/settings',
-	profileView: '/profile'
+	profileView: '/profile',
+	axiosView: '/axios',
 }
 
 export default RoutingPath

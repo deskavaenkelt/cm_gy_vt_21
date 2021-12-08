@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router'
 import { BrowserRouter, Navigate, Routes } from 'react-router-dom'
+import AxiosView from '../view/AxiosView'
 import CounterView from '../view/CounterView'
 import HomeView from '../view/HomeView'
 import { PageNotFoundView } from '../view/PageNotFoundView'
@@ -22,6 +23,7 @@ export const Routing = (props: { children?: React.ReactChild }) => {
 				<Route path={ RoutingPath.signInView } element={ <SignInView/> }/>
 				<Route path={ RoutingPath.settingsView } element={ <SettingsView/> }/>
 				<Route path={ RoutingPath.profileView } element={ <ProfileView/> }/>
+				<Route path={ RoutingPath.axiosView } element={ <AxiosView/> }/>
 			</Routes>
 		</BrowserRouter>
 	)

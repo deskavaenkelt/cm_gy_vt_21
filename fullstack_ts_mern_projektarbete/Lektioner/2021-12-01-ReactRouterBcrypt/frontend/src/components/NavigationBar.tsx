@@ -21,6 +21,7 @@ const NavigationBar = () => {
 					<LiLeft><Link to={ RoutingPath.homeView }>Home</Link></LiLeft>
 					<LiLeft><Link to={ RoutingPath.counterView }>Counter</Link></LiLeft>
 					<LiLeft><Link to={ RoutingPath.somethingElseView }>Not found</Link></LiLeft>
+					<LiLeft><Link to={ RoutingPath.axiosView }>AxiosView</Link></LiLeft>
 					
 					{ displayUserIfAuthenticated() }
 				</Ul>
