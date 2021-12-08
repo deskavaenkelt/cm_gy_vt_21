@@ -3,24 +3,36 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { PrimaryButton } from '../components/CustomButtonComponent'
 import RoutingPath from '../routes/RoutingPath'
+import UserService from '../shared/api/service/UserService'
 import { useUserContext } from '../shared/global/provider/UserProvider'
+import { CreateUserObject } from '../shared/interface/UsersInterfaces'
 
 export const SignInView = () => {
-	// TODO: Radera vid koppling till databas
-	const myUser = {
-		username: 'Admin',
-		password: 'MyPass'
-	}
-	
-	const [username, setUsername] = useState<string>(myUser.username)
-	const [password, setPassword] = useState<string>(myUser.password)
+	const [username, setUsername] = useState<string>('Ada')
+	const [password, setPassword] = useState<string>('SecretPassword')
 	const [loginText, setLoginText] = useState<string>('')
 	const {authenticatedUser, setAuthenticatedUser} = useUserContext()
 	
 	const navigate = useNavigate()
 	
-	const login = () => {
-		if (username === myUser.username && password === myUser.password) {
+	const verifyUser = () => {
+		const payload: CreateUserObject = {
+			username: username,
+			password: password,
+		}
+		
+		UserService.verifyUser(payload)
+			.then(function(response) {
+				console.log(response.data.message)
+				login(response.data.message)
+			})
+			.catch(function (error) {
+				console.log(error)
+			})
+	}
+	
+	const login = (apiResponse: boolean) => {
+		if (apiResponse) {
 			setAuthenticatedUser(username)
 			localStorage.setItem('username', username)
 			navigate(RoutingPath.homeView)
@@ -39,7 +51,7 @@ export const SignInView = () => {
 				<input type='password' onChange={ event => setPassword(event.target.value) }/>
 			</GridContainer>
 			<H3>{ loginText }</H3>
-			<PrimaryButton onClick={ () => login() } children={ 'Log In' }/>
+			<PrimaryButton onClick={ () => verifyUser() } children={ 'Log In' }/>
 			<PrimaryButton onClick={ () => alert(authenticatedUser) } children={ 'Show user' }/>
 		</Wrapper>
 	)
