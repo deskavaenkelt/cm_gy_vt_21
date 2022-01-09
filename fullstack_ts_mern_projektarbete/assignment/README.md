@@ -11,7 +11,6 @@
     - [Vad ska ni leverera?](#vad-ska-ni-leverera)
         - [Webbutveckling 3 del](#webbutveckling-3-del)
         - [Webbserverprogrammering 2 del](#webbserverprogrammering-2-del)
-        - [Drift och arbetssätt ](#drift-och-arbetsstt)
         - [Övrigt](#vrigt)
 - [Projekt Uppgift](#projekt-uppgift)
     - [Skapa Bookface](#skapa-bookface)
@@ -89,16 +88,11 @@ koden för driftning online.
 
 Ni bör ha separata databaser för development och production.
 
-### Drift och arbetssätt
-
-- GitHub -> branches
-- Drifta -> DevOps Azure
-
 ### Övrigt
 
 - Ni ska använda er av Jira för projektplanering
 - Strukturera upp ert arbete
-- Dokumentation på ert arbete
+- Dokumentera ert arbete
 
 # Projekt Uppgift
 
@@ -136,9 +130,7 @@ En helhetslösning med följande egenskaper:
     - Hur man driftar hela projektet
     - Hur man startar/stoppar backend/frontend/databas
     - Allt som behövs för att vem som helst ska kunna starta projektet på sin dator
-- Eran webbplats skal vara driftsatt online vid kursens slut
 
-# OBS Betygskraven nedan är utkast, kommer revideras
 
 ## Betyg E
 
@@ -194,6 +186,7 @@ Allt i [Betyg C](#betyg-c) ska vara uppfyllt samt:
 - Skriv så tydlig kod så kommentarer ofta blir onödiga.
 - Där du använder kommentarer ska de _**noggranna och utförliga/tydliga**_.
 - **Väldigt lättläst kod** dvs någon med mindre-/nybörjar-kunskaper ska kunna läsa och förstå er kod.
+- Automatiska tester
 
 ### Dokumentation
 
@@ -205,4 +198,4 @@ Din dokumentation ska utöver det i [Betyg C](#betyg-c) innehålla:
 
 ## Sista inlämningstid
 
-Deadline 31 Dec 2021, 23:59
+Deadline 2 Jan 2022, 23:59
