@@ -114,7 +114,6 @@ En helhetslösning med följande egenskaper:
     - Meddelanden
 
 - Kryptering av lösenord
-- TLS dvs säkra kommunikationen mellan frontend och backend
 - Inloggning
 - Registrering
 
